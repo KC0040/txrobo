@@ -1,0 +1,383 @@
+<!DOCTYPE html>
+
+<html class="dark" lang="en"><head>
+<meta charset="utf-8"/>
+<meta content="width=device-width, initial-scale=1.0" name="viewport"/>
+<script src="https://cdn.tailwindcss.com?plugins=forms,container-queries"></script>
+<link href="https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@300;400;500;600;700;800;900&amp;family=Inter:wght@300;400;500;600;700&amp;display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/>
+<script id="tailwind-config">
+      tailwind.config = {
+        darkMode: "class",
+        theme: {
+          extend: {
+            "colors": {
+                    "on-secondary-fixed": "#151c25",
+                    "background": "#0d131f",
+                    "surface-dim": "#0d131f",
+                    "primary-container": "#2b6cee",
+                    "secondary-container": "#404752",
+                    "on-secondary-fixed-variant": "#404752",
+                    "on-secondary-container": "#afb5c2",
+                    "surface-tint": "#b2c5ff",
+                    "secondary-fixed-dim": "#c0c7d3",
+                    "surface-container-low": "#161c28",
+                    "on-surface": "#dde2f4",
+                    "outline-variant": "#424654",
+                    "inverse-on-surface": "#2a303d",
+                    "on-primary-fixed-variant": "#0040a2",
+                    "on-primary-fixed": "#001848",
+                    "tertiary": "#a4c9ff",
+                    "on-error": "#690005",
+                    "outline": "#8c90a0",
+                    "tertiary-container": "#2676c8",
+                    "inverse-surface": "#dde2f4",
+                    "on-primary-container": "#fdfbff",
+                    "surface-container-high": "#242a37",
+                    "surface": "#0d131f",
+                    "secondary-fixed": "#dce3f0",
+                    "on-primary": "#002b73",
+                    "surface-container": "#1a202c",
+                    "primary": "#b2c5ff",
+                    "on-tertiary-fixed": "#001c39",
+                    "surface-container-highest": "#2f3542",
+                    "on-tertiary": "#00315d",
+                    "tertiary-fixed-dim": "#a4c9ff",
+                    "primary-fixed-dim": "#b2c5ff",
+                    "tertiary-fixed": "#d4e3ff",
+                    "on-tertiary-fixed-variant": "#004883",
+                    "error-container": "#93000a",
+                    "inverse-primary": "#0055d3",
+                    "on-error-container": "#ffdad6",
+                    "on-tertiary-container": "#fcfbff",
+                    "surface-variant": "#2f3542",
+                    "primary-fixed": "#dae2ff",
+                    "error": "#ffb4ab",
+                    "on-secondary": "#2a313b",
+                    "on-surface-variant": "#c3c6d7",
+                    "surface-bright": "#333946",
+                    "secondary": "#c0c7d3",
+                    "on-background": "#dde2f4",
+                    "surface-container-lowest": "#080e1a"
+            },
+            "borderRadius": {
+                    "DEFAULT": "0.125rem",
+                    "lg": "0.25rem",
+                    "xl": "0.5rem",
+                    "full": "0.75rem"
+            },
+            "fontFamily": {
+                    "headline": ["Space Grotesk"],
+                    "display": ["Space Grotesk"],
+                    "body": ["Inter"],
+                    "label": ["Space Grotesk"]
+            }
+          },
+        },
+      }
+    </script>
+<style>
+        .material-symbols-outlined {
+            font-variation-settings: 'FILL' 0, 'wght' 400, 'GRAD' 0, 'opsz' 24;
+        }
+        body {
+            background-color: #0d131f;
+            color: #dde2f4;
+            font-family: 'Inter', sans-serif;
+        }
+        .space-grotesk { font-family: 'Space Grotesk', sans-serif; }
+    </style>
+<style>
+    body {
+      min-height: max(884px, 100dvh);
+    }
+  </style>
+  </head>
+<body class="bg-background text-on-surface">
+<!-- Navigation Drawer (Side) -->
+<aside class="h-full w-80 fixed left-0 top-0 z-[100] bg-slate-950 bg-gradient-to-r from-slate-900 to-transparent shadow-[40px_0_60px_-10px_rgba(221,226,244,0.06)] hidden md:flex flex-col p-10 gap-8">
+<div class="font-['Space_Grotesk'] text-xl font-bold text-indigo-100 mb-4">TXROBO SYSTEMS</div>
+<nav class="flex flex-col gap-2">
+<a class="flex items-center gap-4 px-4 py-3 text-indigo-200 bg-indigo-500/10 border-l-4 border-indigo-400 font-['Space_Grotesk'] uppercase tracking-[0.2em] text-xs font-bold transition-all" href="#">
+<span class="material-symbols-outlined">precision_manufacturing</span>
+<span>FLEET</span>
+</a>
+<a class="flex items-center gap-4 px-4 py-3 text-slate-500 hover:text-slate-300 hover:bg-slate-900/50 font-['Space_Grotesk'] uppercase tracking-[0.2em] text-xs font-bold transition-all" href="#">
+<span class="material-symbols-outlined">bolt</span>
+<span>PRECISION</span>
+</a>
+<a class="flex items-center gap-4 px-4 py-3 text-slate-500 hover:text-slate-300 hover:bg-slate-900/50 font-['Space_Grotesk'] uppercase tracking-[0.2em] text-xs font-bold transition-all" href="#">
+<span class="material-symbols-outlined">settings_input_component</span>
+<span>KINETICS</span>
+</a>
+<a class="flex items-center gap-4 px-4 py-3 text-slate-500 hover:text-slate-300 hover:bg-slate-900/50 font-['Space_Grotesk'] uppercase tracking-[0.2em] text-xs font-bold transition-all" href="#">
+<span class="material-symbols-outlined">monitoring</span>
+<span>DASHBOARD</span>
+</a>
+<a class="flex items-center gap-4 px-4 py-3 text-slate-500 hover:text-slate-300 hover:bg-slate-900/50 font-['Space_Grotesk'] uppercase tracking-[0.2em] text-xs font-bold transition-all" href="#">
+<span class="material-symbols-outlined">memory</span>
+<span>INTEL</span>
+</a>
+</nav>
+<div class="mt-auto border-t border-slate-800/50 pt-8">
+<div class="text-[10px] tracking-widest text-slate-500 uppercase font-bold">System Status</div>
+<div class="flex items-center gap-2 mt-2">
+<div class="w-2 h-2 rounded-full bg-primary animate-pulse"></div>
+<span class="text-xs text-indigo-200 font-mono uppercase tracking-tighter">ALL CORE MODULES ONLINE</span>
+</div>
+</div>
+</aside>
+<!-- Main Canvas -->
+<main class="md:ml-80 min-h-screen">
+<!-- TopAppBar -->
+<header class="bg-slate-950/80 backdrop-blur-xl docked full-width top-0 z-[50] shadow-[0_20px_50px_rgba(8,_112,_184,_0.05)]">
+<div class="flex justify-between items-center px-8 py-6 max-w-[1920px] mx-auto">
+<div class="flex items-center gap-4">
+<span class="material-symbols-outlined text-indigo-200 cursor-pointer">menu</span>
+<span class="font-['Space_Grotesk'] text-2xl font-black tracking-tighter text-indigo-200 uppercase">TXROBO</span>
+</div>
+<div class="hidden lg:flex items-center gap-12 font-['Space_Grotesk'] uppercase tracking-[0.15em] text-xs font-bold">
+<a class="text-indigo-200 border-b-2 border-indigo-200 pb-1" href="#">CATALOG</a>
+<a class="text-slate-400 hover:text-slate-200 transition-colors" href="#">ENG-SPECS</a>
+<a class="text-slate-400 hover:text-slate-200 transition-colors" href="#">OS-V4</a>
+</div>
+<button class="bg-primary-container text-on-primary-container px-6 py-2 font-['Space_Grotesk'] font-bold tracking-widest text-xs rounded-lg hover:bg-indigo-500 transition-all">
+                    CONNECT
+                </button>
+</div>
+</header>
+<!-- Hero Section: Editorial Style -->
+<section class="relative px-8 md:px-16 pt-24 pb-32 overflow-hidden">
+<div class="max-w-7xl mx-auto grid grid-cols-1 lg:grid-cols-12 gap-12 items-center">
+<div class="lg:col-span-7 z-10">
+<span class="inline-block text-primary font-['Space_Grotesk'] font-bold tracking-[0.4em] text-xs mb-6 uppercase">Engineering Protocol // Ver 2024.1</span>
+<h1 class="font-['Space_Grotesk'] text-6xl md:text-8xl font-black tracking-tighter text-on-surface leading-[0.85] mb-8">
+                        PRECISION <br/><span class="text-indigo-300/40">KINETICS</span>
+</h1>
+<p class="font-['Inter'] text-lg text-on-surface-variant max-w-xl leading-relaxed font-light">
+                        Architecting the future of bipedal autonomy. Our fleet represents the convergence of high-density lithium alloys and neural-mesh navigation.
+                    </p>
+</div>
+<div class="lg:col-span-5 relative">
+<div class="aspect-square bg-surface-container-low rounded-full overflow-hidden relative group">
+<img class="w-full h-full object-cover grayscale brightness-75 group-hover:scale-110 transition-transform duration-700" data-alt="A macro cinematic close-up of a high-tech robotic leg joint, showing intricate gears and polished carbon fiber panels. The lighting is low-key and moody with cool blue highlights from an unseen interface reflecting off the metallic surfaces. The aesthetic is ultra-modern and engineering-focused, with a shallow depth of field emphasizing the complex mechanical precision. The background is a deep, dark navy blue atmosphere consistent with a premium robotics design system." src="https://lh3.googleusercontent.com/aida-public/AB6AXuDknFSO0e8_bt9jCgAGfrw_q98gnTylYxo5q7EUsdPXhKhgmEW27WArmBk5UKvbpq7H3F-zum1qk2xRuAFp5UhDFFAoT-8bh_4CBH6wLYOT0hjgiuf_rxA00e8QSHBSfwFFPn5JYuj-v1hrALpfLVmyyrDNuM-Q_fot33U9kq54_E0MZzlqyAl4AfKDbk9uYnHQt6Yf3gdlyc-dxjt6uxgLWaMpwW-H2mfzk2_eyDIQucIqE_UbXirSYBVAg5I9eYC1j35_cU5S__gn"/>
+<div class="absolute inset-0 bg-gradient-to-tr from-background via-transparent to-transparent"></div>
+</div>
+<!-- Technical Callout -->
+<div class="absolute -bottom-8 -left-8 bg-slate-900/90 backdrop-blur-md p-6 border border-slate-800/50 max-w-xs shadow-2xl">
+<div class="flex items-center justify-between mb-4">
+<span class="text-[10px] font-bold tracking-widest text-primary uppercase">Active Flux Sensor</span>
+<span class="text-xs font-mono text-indigo-400">99.98%</span>
+</div>
+<div class="h-[1px] w-full bg-slate-800 mb-4">
+<div class="h-full bg-primary w-[90%]"></div>
+</div>
+<p class="text-[10px] leading-relaxed text-slate-400 uppercase tracking-wider">Real-time environmental mapping through 256-point lidar grid integration.</p>
+</div>
+</div>
+</div>
+</section>
+<!-- Product Grid: Bento Style -->
+<section class="px-8 md:px-16 py-24 bg-surface-container-lowest">
+<div class="max-w-7xl mx-auto">
+<div class="flex flex-col md:flex-row md:items-end justify-between mb-16 gap-8">
+<div>
+<h2 class="font-['Space_Grotesk'] text-4xl font-bold tracking-tight text-indigo-100">THE FLEET</h2>
+<div class="h-1 w-24 bg-primary mt-4"></div>
+</div>
+<p class="text-slate-500 font-['Inter'] text-sm max-w-md uppercase tracking-wider leading-relaxed">
+                        Dual-tier autonomous units engineered for distinct operational theaters: from lab-grade precision to extreme-environment resilience.
+                    </p>
+</div>
+<div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
+<!-- TX-01 Prime Card -->
+<div class="md:col-span-2 bg-surface-container-low p-1 rounded-lg group overflow-hidden">
+<div class="relative h-[500px] bg-slate-950 rounded-md overflow-hidden p-12">
+<img class="absolute inset-0 w-full h-full object-cover opacity-30 group-hover:scale-105 transition-transform duration-1000" data-alt="A full-length professional shot of a white and chrome humanoid robot standing in a dark, minimalist industrial setting. The robot's torso is sleek with visible glowing internal circuits in a soft indigo hue. Dramatic edge lighting outlines the silhouette against a deep space navy background. The mood is sophisticated and authoritative, highlighting the robot's advanced engineering and graceful proportions. The scene is clean, high-contrast, and focused on technological superiority." src="https://lh3.googleusercontent.com/aida-public/AB6AXuAwU3X10rYdemJiuGS0-6RQiOiOgGRtBxRDvRDRC7roHc7M8Qcq3EiyGc8IZj38XrgipBe6aGK04FzsvBo-VnvoRtyXLGvJ9pM1jHWR3tcYAu1lis2JIs3_RdNd3G12n3Xb_XLqQIc3rZpfYGa66WkOPj_zLcYcb9AMV-c5tZCvNW5IeUBCER5umJ1Rvw4dR_ZJJvzbiR-vv537pm4gqu8nXCHtqui8KwBFn6TLJXlF5HM1YWgHkMtfjrk137ucuzfEK9E0jJ8EWrCz"/>
+<div class="relative z-10 h-full flex flex-col">
+<div class="flex justify-between items-start">
+<div>
+<span class="text-xs font-bold tracking-[0.3em] text-primary bg-primary/10 px-3 py-1 rounded">SERIES 01</span>
+<h3 class="font-['Space_Grotesk'] text-5xl font-black mt-4 tracking-tighter">TX-01 PRIME</h3>
+</div>
+<div class="text-right">
+<div class="text-[10px] text-slate-500 tracking-widest uppercase">Classification</div>
+<div class="text-sm font-bold text-indigo-100 uppercase mt-1">Universal Humanoid</div>
+</div>
+</div>
+<div class="mt-auto grid grid-cols-2 md:grid-cols-4 gap-8">
+<div>
+<div class="text-[10px] text-slate-500 tracking-widest uppercase">Torque Output</div>
+<div class="text-2xl font-bold font-['Space_Grotesk'] text-on-surface">1,200 NM</div>
+</div>
+<div>
+<div class="text-[10px] text-slate-500 tracking-widest uppercase">Reaction Time</div>
+<div class="text-2xl font-bold font-['Space_Grotesk'] text-on-surface">3 MS</div>
+</div>
+<div>
+<div class="text-[10px] text-slate-500 tracking-widest uppercase">Weight-Class</div>
+<div class="text-2xl font-bold font-['Space_Grotesk'] text-on-surface">LIGHT</div>
+</div>
+<div class="flex items-end">
+<button class="w-full bg-on-surface text-background font-bold py-3 text-xs tracking-widest uppercase rounded">VIEW SPECS</button>
+</div>
+</div>
+</div>
+</div>
+</div>
+<!-- TX-02 Heavy Card -->
+<div class="bg-surface-container-high p-12 flex flex-col justify-between relative group overflow-hidden">
+<div class="absolute inset-0 bg-gradient-to-b from-indigo-500/5 to-transparent"></div>
+<div class="relative z-10">
+<span class="text-xs font-bold tracking-[0.3em] text-indigo-300/60 uppercase">Series 02</span>
+<h3 class="font-['Space_Grotesk'] text-4xl font-black mt-4 tracking-tighter">TX-02 TITAN</h3>
+<p class="mt-6 text-sm text-slate-400 font-['Inter'] leading-relaxed">Reinforced skeletal structure for high-load logistics and hazardous terrain deployment.</p>
+</div>
+<div class="mt-8 pt-8 border-t border-slate-800/50 relative z-10">
+<ul class="space-y-4">
+<li class="flex justify-between items-center text-xs tracking-wider uppercase font-bold">
+<span class="text-slate-500">Payload</span>
+<span class="text-indigo-200">250KG</span>
+</li>
+<li class="flex justify-between items-center text-xs tracking-wider uppercase font-bold">
+<span class="text-slate-500">Endurance</span>
+<span class="text-indigo-200">18HR</span>
+</li>
+<li class="flex justify-between items-center text-xs tracking-wider uppercase font-bold">
+<span class="text-slate-500">Armor Grade</span>
+<span class="text-indigo-200">IV-C</span>
+</li>
+</ul>
+</div>
+</div>
+<!-- Tech Specs Card (Data Monolith) -->
+<div class="bg-surface-container-lowest border border-slate-800/30 p-8 md:col-span-1">
+<div class="flex items-center gap-3 mb-8">
+<span class="material-symbols-outlined text-primary" style="font-variation-settings: 'FILL' 1;">memory</span>
+<h4 class="font-['Space_Grotesk'] text-sm font-bold tracking-widest uppercase">Neural Architecture</h4>
+</div>
+<div class="space-y-6">
+<div>
+<div class="flex justify-between text-[10px] font-bold uppercase tracking-widest text-slate-500 mb-2">
+<span>Synaptic Density</span>
+<span class="text-primary">88%</span>
+</div>
+<div class="h-1.5 bg-slate-900 overflow-hidden">
+<div class="h-full bg-primary w-[88%]"></div>
+</div>
+</div>
+<div>
+<div class="flex justify-between text-[10px] font-bold uppercase tracking-widest text-slate-500 mb-2">
+<span>Logic Processing</span>
+<span class="text-primary">94%</span>
+</div>
+<div class="h-1.5 bg-slate-900 overflow-hidden">
+<div class="h-full bg-primary w-[94%]"></div>
+</div>
+</div>
+<p class="text-xs text-slate-500 font-['Inter'] leading-relaxed pt-4 italic">
+                                Proprietary Cortex-V4 OS with localized ML inference cores and quantum-encrypted transmission.
+                            </p>
+</div>
+</div>
+<!-- Engineering Card -->
+<div class="bg-primary-container p-12 md:col-span-2 flex flex-col md:flex-row gap-8 items-center text-on-primary-container relative overflow-hidden group">
+<div class="absolute -right-20 -bottom-20 w-80 h-80 bg-white/10 rounded-full blur-3xl group-hover:scale-125 transition-transform duration-1000"></div>
+<div class="flex-1 relative z-10">
+<h4 class="font-['Space_Grotesk'] text-3xl font-black tracking-tight mb-4 uppercase">Advanced Composites</h4>
+<p class="font-['Inter'] text-indigo-100 text-sm leading-relaxed max-w-lg">
+                                Our frames utilize a proprietary titanium-carbon weave, offering 4x the tensile strength of industrial grade steel at 30% of the mass. Every joint is machined to a tolerance of 0.005mm.
+                            </p>
+<button class="mt-8 flex items-center gap-2 text-xs font-bold tracking-[0.3em] uppercase border-b-2 border-on-primary-container pb-1">
+                                Laboratory Certifications
+                                <span class="material-symbols-outlined text-sm">arrow_forward</span>
+</button>
+</div>
+<div class="w-full md:w-64 h-48 bg-slate-950/40 backdrop-blur rounded-lg flex items-center justify-center p-6 border border-white/10 relative z-10">
+<div class="text-center">
+<div class="text-4xl font-['Space_Grotesk'] font-black">X-RAY</div>
+<div class="text-[10px] font-bold tracking-widest uppercase text-indigo-200 mt-2">Internal Framework Scan</div>
+</div>
+</div>
+</div>
+</div>
+</div>
+</section>
+<!-- Technical Specification Matrix -->
+<section class="px-8 md:px-16 py-32 bg-background">
+<div class="max-w-7xl mx-auto">
+<div class="text-center mb-24">
+<h2 class="font-['Space_Grotesk'] text-5xl font-black tracking-tighter mb-4">SPECIFICATION MATRIX</h2>
+<p class="text-slate-500 font-['Inter'] text-sm uppercase tracking-widest">Cross-Platform Comparison &amp; System Dynamics</p>
+</div>
+<div class="overflow-x-auto">
+<table class="w-full border-collapse">
+<thead>
+<tr class="border-b border-slate-800/50">
+<th class="py-8 text-left text-[10px] font-bold tracking-[0.4em] text-slate-500 uppercase">Core Architecture</th>
+<th class="py-8 text-left text-[10px] font-bold tracking-[0.4em] text-primary uppercase">TX-01 PRIME</th>
+<th class="py-8 text-left text-[10px] font-bold tracking-[0.4em] text-indigo-300 uppercase">TX-02 TITAN</th>
+</tr>
+</thead>
+<tbody class="font-['Inter'] text-sm divide-y divide-slate-800/30">
+<tr>
+<td class="py-8 text-slate-400 font-medium">Drive System</td>
+<td class="py-8 text-on-surface font-bold">Harmonic Drive Dual-Stage</td>
+<td class="py-8 text-on-surface font-bold">Planetary Gear + Hydraulic-Aux</td>
+</tr>
+<tr>
+<td class="py-8 text-slate-400 font-medium">Power Density</td>
+<td class="py-8 text-on-surface font-bold">4.2 kW/kg</td>
+<td class="py-8 text-on-surface font-bold">3.8 kW/kg (High Efficiency)</td>
+</tr>
+<tr>
+<td class="py-8 text-slate-400 font-medium">Kinematic DOF</td>
+<td class="py-8 text-on-surface font-bold">28 Degrees of Freedom</td>
+<td class="py-8 text-on-surface font-bold">22 Degrees of Freedom</td>
+</tr>
+<tr>
+<td class="py-8 text-slate-400 font-medium">Surface Material</td>
+<td class="py-8 text-on-surface font-bold">Aerospace Polymer Shell</td>
+<td class="py-8 text-on-surface font-bold">Ballistic Ceramic Plates</td>
+</tr>
+<tr>
+<td class="py-8 text-slate-400 font-medium">Autonomous Level</td>
+<td class="py-8 text-on-surface font-bold">SAE Level 5 Bipedal</td>
+<td class="py-8 text-on-surface font-bold">Remote-Hybrid Ready</td>
+</tr>
+</tbody>
+</table>
+</div>
+</div>
+</section>
+<!-- Footer -->
+<footer class="bg-slate-950 w-full py-12 px-8 flex flex-col md:flex-row justify-between items-center border-t border-slate-800/20">
+<div class="flex flex-col gap-4 mb-8 md:mb-0">
+<div class="font-['Space_Grotesk'] font-bold text-slate-200 uppercase tracking-tighter text-lg">TXROBO KINETICS</div>
+<p class="font-['Inter'] text-[10px] tracking-widest uppercase text-slate-500">© 2024 TXROBO KINETICS. ENGINEERED FOR PRECISION.</p>
+</div>
+<div class="flex gap-12 font-['Inter'] text-[10px] tracking-widest uppercase">
+<a class="text-slate-500 hover:text-indigo-200 transition-colors" href="#">SYSTEMS</a>
+<a class="text-slate-500 hover:text-indigo-200 transition-colors" href="#">NETWORK</a>
+<a class="text-slate-500 hover:text-indigo-200 transition-colors" href="#">PRIVACY</a>
+<a class="text-slate-500 hover:text-indigo-200 transition-colors" href="#">PROTOCOL</a>
+</div>
+<div class="mt-8 md:mt-0 flex gap-6">
+<div class="w-10 h-10 rounded-full border border-slate-800 flex items-center justify-center text-slate-500 hover:text-primary hover:border-primary transition-all cursor-pointer">
+<span class="material-symbols-outlined text-sm">hub</span>
+</div>
+<div class="w-10 h-10 rounded-full border border-slate-800 flex items-center justify-center text-slate-500 hover:text-primary hover:border-primary transition-all cursor-pointer">
+<span class="material-symbols-outlined text-sm">terminal</span>
+</div>
+</div>
+</footer>
+</main>
+<!-- Mobile Nav Anchor (Visible only on mobile) -->
+<nav class="md:hidden fixed bottom-0 left-0 right-0 bg-slate-950/90 backdrop-blur-xl flex justify-around py-4 z-[100] border-t border-slate-800/50">
+<span class="material-symbols-outlined text-primary">precision_manufacturing</span>
+<span class="material-symbols-outlined text-slate-500">bolt</span>
+<span class="material-symbols-outlined text-slate-500">monitoring</span>
+<span class="material-symbols-outlined text-slate-500">memory</span>
+</nav>
+</body></html>

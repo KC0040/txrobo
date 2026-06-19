@@ -1,0 +1,338 @@
+<!DOCTYPE html>
+
+<html class="dark" lang="en"><head>
+<meta charset="utf-8"/>
+<meta content="width=device-width, initial-scale=1.0" name="viewport"/>
+<link href="https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@300;400;500;600;700;800;900&amp;family=Inter:wght@300;400;500;600;700&amp;display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/>
+<script src="https://cdn.tailwindcss.com?plugins=forms,container-queries"></script>
+<script id="tailwind-config">
+      tailwind.config = {
+        darkMode: "class",
+        theme: {
+          extend: {
+            "colors": {
+                    "on-secondary-fixed": "#151c25",
+                    "background": "#0d131f",
+                    "surface-dim": "#0d131f",
+                    "primary-container": "#2b6cee",
+                    "secondary-container": "#404752",
+                    "on-secondary-fixed-variant": "#404752",
+                    "on-secondary-container": "#afb5c2",
+                    "surface-tint": "#b2c5ff",
+                    "secondary-fixed-dim": "#c0c7d3",
+                    "surface-container-low": "#161c28",
+                    "on-surface": "#dde2f4",
+                    "outline-variant": "#424654",
+                    "inverse-on-surface": "#2a303d",
+                    "on-primary-fixed-variant": "#0040a2",
+                    "on-primary-fixed": "#001848",
+                    "tertiary": "#a4c9ff",
+                    "on-error": "#690005",
+                    "outline": "#8c90a0",
+                    "tertiary-container": "#2676c8",
+                    "inverse-surface": "#dde2f4",
+                    "on-primary-container": "#fdfbff",
+                    "surface-container-high": "#242a37",
+                    "surface": "#0d131f",
+                    "secondary-fixed": "#dce3f0",
+                    "on-primary": "#002b73",
+                    "surface-container": "#1a202c",
+                    "primary": "#b2c5ff",
+                    "on-tertiary-fixed": "#001c39",
+                    "surface-container-highest": "#2f3542",
+                    "on-tertiary": "#00315d",
+                    "tertiary-fixed-dim": "#a4c9ff",
+                    "primary-fixed-dim": "#b2c5ff",
+                    "tertiary-fixed": "#d4e3ff",
+                    "on-tertiary-fixed-variant": "#004883",
+                    "error-container": "#93000a",
+                    "inverse-primary": "#0055d3",
+                    "on-error-container": "#ffdad6",
+                    "on-tertiary-container": "#fcfbff",
+                    "surface-variant": "#2f3542",
+                    "primary-fixed": "#dae2ff",
+                    "error": "#ffb4ab",
+                    "on-secondary": "#2a313b",
+                    "on-surface-variant": "#c3c6d7",
+                    "surface-bright": "#333946",
+                    "secondary": "#c0c7d3",
+                    "on-background": "#dde2f4",
+                    "surface-container-lowest": "#080e1a"
+            },
+            "borderRadius": {
+                    "DEFAULT": "0.125rem",
+                    "lg": "0.25rem",
+                    "xl": "0.5rem",
+                    "full": "0.75rem"
+            },
+            "fontFamily": {
+                    "headline": ["Space Grotesk"],
+                    "display": ["Space Grotesk"],
+                    "body": ["Inter"],
+                    "label": ["Space Grotesk"]
+            }
+          }
+        }
+      }
+    </script>
+<style>
+        .material-symbols-outlined {
+            font-variation-settings: 'FILL' 0, 'wght' 300, 'GRAD' 0, 'opsz' 24;
+        }
+        ::-webkit-scrollbar { width: 4px; }
+        ::-webkit-scrollbar-track { background: #0d131f; }
+        ::-webkit-scrollbar-thumb { background: #2b6cee; }
+    </style>
+<style>
+    body {
+      min-height: max(884px, 100dvh);
+    }
+  </style>
+  </head>
+<body class="bg-background text-on-surface font-body selection:bg-primary-container selection:text-on-primary-container">
+<!-- Navigation Drawer (SideNav) -->
+<aside class="h-full w-80 fixed left-0 top-0 z-[100] bg-slate-950 flex flex-col p-10 gap-8 bg-gradient-to-r from-slate-900 to-transparent shadow-[40px_0_60px_-10px_rgba(221,226,244,0.06)] hidden md:flex">
+<div class="font-['Space_Grotesk'] text-xl font-bold text-indigo-100 mb-8">TXROBO SYSTEMS</div>
+<nav class="flex flex-col gap-6">
+<a class="flex items-center gap-4 py-3 px-4 rounded-lg text-slate-500 hover:text-slate-300 hover:bg-slate-900/50 transition-all font-['Space_Grotesk'] uppercase tracking-[0.2em] text-xs font-bold" href="#">
+<span class="material-symbols-outlined" data-icon="precision_manufacturing">precision_manufacturing</span>
+                FLEET
+            </a>
+<a class="flex items-center gap-4 py-3 px-4 rounded-lg text-slate-500 hover:text-slate-300 hover:bg-slate-900/50 transition-all font-['Space_Grotesk'] uppercase tracking-[0.2em] text-xs font-bold" href="#">
+<span class="material-symbols-outlined" data-icon="bolt">bolt</span>
+                PRECISION
+            </a>
+<a class="flex items-center gap-4 py-3 px-4 rounded-lg text-slate-500 hover:text-slate-300 hover:bg-slate-900/50 transition-all font-['Space_Grotesk'] uppercase tracking-[0.2em] text-xs font-bold" href="#">
+<span class="material-symbols-outlined" data-icon="settings_input_component">settings_input_component</span>
+                KINETICS
+            </a>
+<a class="flex items-center gap-4 py-3 px-4 rounded-lg text-indigo-200 bg-indigo-500/10 border-l-4 border-indigo-400 font-['Space_Grotesk'] uppercase tracking-[0.2em] text-xs font-bold" href="#">
+<span class="material-symbols-outlined" data-icon="monitoring">monitoring</span>
+                DASHBOARD
+            </a>
+<a class="flex items-center gap-4 py-3 px-4 rounded-lg text-slate-500 hover:text-slate-300 hover:bg-slate-900/50 transition-all font-['Space_Grotesk'] uppercase tracking-[0.2em] text-xs font-bold" href="#">
+<span class="material-symbols-outlined" data-icon="memory">memory</span>
+                INTEL
+            </a>
+</nav>
+<div class="mt-auto">
+<div class="p-6 bg-surface-container-low rounded-xl border border-outline-variant/10">
+<div class="text-[10px] tracking-widest text-primary mb-2 uppercase">Core Status</div>
+<div class="flex items-center gap-2">
+<div class="w-2 h-2 bg-primary rounded-full animate-pulse"></div>
+<span class="text-xs font-label">NEURAL LINK ACTIVE</span>
+</div>
+</div>
+</div>
+</aside>
+<!-- Main Content Canvas -->
+<main class="md:ml-80 min-h-screen flex flex-col">
+<!-- TopAppBar -->
+<header class="bg-slate-950/80 backdrop-blur-xl docked full-width top-0 z-50 shadow-[0_20px_50px_rgba(8,_112,_184,_0.05)]">
+<div class="flex justify-between items-center px-8 py-6 max-w-[1920px] mx-auto">
+<div class="flex items-center gap-4">
+<span class="material-symbols-outlined text-indigo-200 cursor-pointer" data-icon="menu">menu</span>
+<h1 class="font-['Space_Grotesk'] text-2xl font-black tracking-tighter text-indigo-200">TXROBO</h1>
+</div>
+<div class="hidden lg:flex items-center gap-8">
+<span class="text-indigo-200 border-b-2 border-indigo-200 pb-1 font-label text-sm tracking-widest cursor-pointer">OVERVIEW</span>
+<span class="text-slate-400 hover:text-slate-200 transition-colors font-label text-sm tracking-widest cursor-pointer">NETWORK</span>
+<span class="text-slate-400 hover:text-slate-200 transition-colors font-label text-sm tracking-widest cursor-pointer">SENSORS</span>
+</div>
+<button class="bg-primary-container text-on-primary-container px-6 py-2 rounded-lg font-label text-xs font-bold tracking-widest hover:scale-95 duration-200 ease-out">
+                    CONNECT
+                </button>
+</div>
+</header>
+<!-- Neural Platform Content -->
+<div class="flex-1 p-8 md:p-12 space-y-12">
+<!-- Hero Data Section -->
+<section class="grid grid-cols-1 lg:grid-cols-12 gap-8 items-end">
+<div class="lg:col-span-7 space-y-6">
+<div class="inline-flex items-center gap-2 px-3 py-1 bg-primary/10 border border-primary/20 rounded-full text-primary text-[10px] font-bold tracking-[0.2em] uppercase">
+<span class="material-symbols-outlined text-[14px]" data-icon="emergency_share">emergency_share</span>
+                        Real-time Neural Stream
+                    </div>
+<h2 class="font-display text-6xl md:text-8xl font-black text-on-surface leading-[0.9] tracking-tighter">
+                        AI FLEET <br/><span class="text-primary-container">KINETICS</span>
+</h2>
+<p class="max-w-xl text-on-surface-variant font-body leading-relaxed text-lg">
+                        Synchronizing global robotic operations through the NEURAL CORE. Precision deployment of autonomous units across multi-vector environments.
+                    </p>
+</div>
+<div class="lg:col-span-5">
+<div class="aspect-video rounded-xl overflow-hidden bg-surface-container-low relative group">
+<img class="w-full h-full object-cover grayscale group-hover:grayscale-0 transition-all duration-700 opacity-60" data-alt="A highly detailed close-up of a futuristic robotic arm with exposed internal circuitry glowing in a deep indigo blue light. The setting is a sterile, dark technological laboratory with soft ambient reflections on matte metallic surfaces. The composition is cinematic with a shallow depth of field, emphasizing the intricate mechanical joints and high-tech sensors. The overall aesthetic is cold, precise, and sophisticated." src="https://lh3.googleusercontent.com/aida-public/AB6AXuBr1mOqenptdyof4waHgEpyolda3H2t11Ma0qbWtazTkdXCsPJjRVC6SI-Sv3IqrtJOg-LbH9II8ESVecrxurXsGw-8R3yNyxFYO6aYaQb07XmKEZt-qn9lfTvZEDHB3mgNV3A_mZzbc7QmHet3eyzTQwo9lZqcM7lmPEyWIHR8kkwhYsf0de2WHge_0pgR5MfEaiQqOidxhV0BsbLm0ItNeMnhUBYBkzvJ2Skjknku3luTJ39bQB1q3aJ7LCKId0dD1aVSNJ2y6O_E"/>
+<div class="absolute inset-0 bg-gradient-to-t from-background to-transparent"></div>
+<div class="absolute bottom-6 left-6 right-6 flex justify-between items-end">
+<div>
+<div class="text-[10px] font-label text-primary tracking-widest uppercase">Unit X-899</div>
+<div class="text-xl font-bold font-display">CALIBRATION PASS</div>
+</div>
+<div class="w-16 h-16 border-t border-r border-primary/40 rounded-tr-xl"></div>
+</div>
+</div>
+</div>
+</section>
+<!-- Bento Grid: Analytics & Status -->
+<section class="grid grid-cols-1 md:grid-cols-4 gap-6">
+<!-- Large Status Card -->
+<div class="md:col-span-2 bg-surface-container-low p-8 rounded-xl relative overflow-hidden border border-outline-variant/5">
+<div class="relative z-10 space-y-8">
+<div class="flex justify-between items-start">
+<span class="material-symbols-outlined text-primary text-4xl" data-icon="hub">hub</span>
+<div class="text-right">
+<div class="text-[10px] font-label text-slate-500 tracking-widest uppercase">Global Nodes</div>
+<div class="text-3xl font-display font-bold">14,282</div>
+</div>
+</div>
+<div class="space-y-4">
+<div class="flex justify-between items-center text-xs font-label text-on-surface-variant">
+<span>NETWORK SATURATION</span>
+<span class="text-primary">88.4%</span>
+</div>
+<div class="h-1 w-full bg-surface-container-highest rounded-full overflow-hidden">
+<div class="h-full bg-primary-container w-[88%]"></div>
+</div>
+</div>
+<div class="grid grid-cols-3 gap-4 border-t border-outline-variant/10 pt-6">
+<div>
+<div class="text-[10px] font-label text-slate-500 uppercase">Latency</div>
+<div class="text-lg font-display font-bold">4ms</div>
+</div>
+<div>
+<div class="text-[10px] font-label text-slate-500 uppercase">Integrity</div>
+<div class="text-lg font-display font-bold">99.9%</div>
+</div>
+<div>
+<div class="text-[10px] font-label text-slate-500 uppercase">Uptime</div>
+<div class="text-lg font-display font-bold">2.4Y</div>
+</div>
+</div>
+</div>
+<div class="absolute -right-20 -bottom-20 w-64 h-64 bg-primary/5 rounded-full blur-[80px]"></div>
+</div>
+<!-- Security Protocol -->
+<div class="bg-surface-container-lowest p-8 rounded-xl border border-primary/20 flex flex-col justify-between">
+<div class="space-y-4">
+<span class="material-symbols-outlined text-error" data-icon="security">security</span>
+<h3 class="font-display text-xl font-bold">PROTOCOLS</h3>
+<p class="text-xs text-on-surface-variant leading-relaxed">
+                            Quantum-encrypted tunnels active across all 12 operational sectors.
+                        </p>
+</div>
+<button class="mt-8 flex items-center justify-between text-xs font-label text-primary hover:gap-4 transition-all">
+                        ENCRYPTION STATUS
+                        <span class="material-symbols-outlined" data-icon="arrow_forward">arrow_forward</span>
+</button>
+</div>
+<!-- Active Fleet -->
+<div class="bg-surface-container p-8 rounded-xl flex flex-col justify-between border border-outline-variant/5">
+<div class="space-y-4">
+<span class="material-symbols-outlined text-tertiary" data-icon="rocket_launch">rocket_launch</span>
+<h3 class="font-display text-xl font-bold">DEPLOYED</h3>
+<div class="flex items-baseline gap-2">
+<span class="text-4xl font-black text-primary">829</span>
+<span class="text-[10px] font-label text-slate-500 uppercase tracking-widest">Units</span>
+</div>
+</div>
+<div class="flex -space-x-3 mt-4">
+<div class="w-8 h-8 rounded-full border-2 border-background bg-slate-800"></div>
+<div class="w-8 h-8 rounded-full border-2 border-background bg-slate-700"></div>
+<div class="w-8 h-8 rounded-full border-2 border-background bg-slate-600"></div>
+<div class="w-8 h-8 rounded-full border-2 border-background bg-primary-container flex items-center justify-center text-[10px] font-bold">+12</div>
+</div>
+</div>
+</section>
+<!-- Technical Visualization Section -->
+<section class="grid grid-cols-1 lg:grid-cols-3 gap-8">
+<!-- Map / Location Tracking -->
+<div class="lg:col-span-2 bg-surface-container-low rounded-xl overflow-hidden relative min-h-[400px]">
+<img class="w-full h-full object-cover opacity-40" data-alt="A dark, stylized world map visualized with glowing cyan and indigo neon connection lines between major technological hubs. The map is viewed from a slightly isometric perspective on a high-contrast dark background with a subtle grid overlay. Golden data pulses travel along the network paths, representing real-time information flow. The overall mood is high-tech, global, and authoritative." data-location="Global Fleet Distribution" src="https://lh3.googleusercontent.com/aida-public/AB6AXuA6jvRaEGNi4961dFKExDxajBxvGlolRsV-JjkZJx1_2yrecAwJXXXwx_csmA2ptClPBR31-6X5D0ykGOHaiTYvZToRyVzNLh7-VoYfYMxGygChISn_2c3TMiD6EgcJTP_Qa7tDDwKe77hYbD_Owke8EoLCunL7olaeMsH0fDAOTGh6pK6BRsUztVkTeDs41frMt1oFsKmnEQtOqeCTBXAWESuYkW4c7sYnqq-8uxZHJD3RfOscDijZAyTkYj8zdqlp5D_2DkvnOBgB"/>
+<div class="absolute inset-0 bg-gradient-to-r from-surface-container-low to-transparent"></div>
+<div class="absolute top-8 left-8 space-y-2">
+<h3 class="font-display text-2xl font-bold">NEURAL TOPOGRAPHY</h3>
+<p class="text-xs font-label text-primary tracking-widest uppercase">Live Vector Monitoring</p>
+</div>
+<!-- UI Overlays for Map -->
+<div class="absolute bottom-8 left-8 flex gap-4">
+<div class="px-4 py-2 bg-slate-950/80 backdrop-blur rounded-lg border border-outline-variant/20 flex items-center gap-3">
+<div class="w-2 h-2 rounded-full bg-error animate-ping"></div>
+<span class="text-[10px] font-bold tracking-widest uppercase">Alert: Sector 7</span>
+</div>
+</div>
+</div>
+<!-- Live Logs / Data Monolith -->
+<div class="bg-surface-container-lowest rounded-xl border border-outline-variant/10 flex flex-col p-6 space-y-6">
+<div class="flex items-center justify-between">
+<h4 class="font-label text-xs font-bold tracking-widest text-slate-500 uppercase">System Intel</h4>
+<span class="material-symbols-outlined text-primary text-sm" data-icon="terminal">terminal</span>
+</div>
+<div class="flex-1 space-y-4 font-mono text-[10px] text-on-surface-variant/70 overflow-y-auto max-h-[350px] pr-2">
+<div class="flex gap-2">
+<span class="text-primary">[12:44:01]</span>
+<span>SYNC_INIT: VECTOR_ALPHA_09 DEPLOYED</span>
+</div>
+<div class="flex gap-2">
+<span class="text-primary">[12:44:05]</span>
+<span>ENCRYPT_HANDSHAKE: SECTOR_BRAVO_SUCCESS</span>
+</div>
+<div class="flex gap-2 text-error">
+<span class="font-bold">[12:44:12]</span>
+<span>WARN: THERMAL_LIMIT_EXCEEDED_U89</span>
+</div>
+<div class="flex gap-2">
+<span class="text-primary">[12:44:18]</span>
+<span>DATA_PACKET: CORE_UPLOAD_COMPLETE</span>
+</div>
+<div class="flex gap-2">
+<span class="text-primary">[12:44:22]</span>
+<span>KINETIC_UPDATE: TORQUE_OPTIMIZED_V2</span>
+</div>
+<div class="flex gap-2">
+<span class="text-primary">[12:44:30]</span>
+<span>NEURAL_LINK: RE-ESTABLISHED_GLOBAL</span>
+</div>
+<div class="flex gap-2">
+<span class="text-primary">[12:44:35]</span>
+<span>HEARTBEAT: ALL_SYSTEMS_NOMINAL</span>
+</div>
+<div class="flex gap-2">
+<span class="text-primary">[12:44:40]</span>
+<span>PROTOCOL: AUTO_MAINTENANCE_IDLE</span>
+</div>
+</div>
+<div class="pt-4 border-t border-outline-variant/10">
+<button class="w-full py-3 bg-surface-container-highest rounded text-xs font-bold font-label tracking-widest hover:bg-primary/20 transition-colors">
+                            DOWNLOAD LOG_REPORT_V4
+                        </button>
+</div>
+</div>
+</section>
+</div>
+<!-- Footer -->
+<footer class="bg-slate-950 w-full py-12 px-8 flex flex-col md:flex-row justify-between items-center border-t border-slate-800/20">
+<div class="flex flex-col gap-2 mb-8 md:mb-0">
+<div class="font-['Space_Grotesk'] font-bold text-slate-200 text-lg">TXROBO KINETICS</div>
+<div class="font-['Inter'] text-[10px] tracking-widest uppercase text-slate-500">
+                    © 2024 TXROBO KINETICS. ENGINEERED FOR PRECISION.
+                </div>
+</div>
+<div class="flex gap-8">
+<a class="text-[10px] tracking-widest uppercase text-slate-500 hover:text-indigo-200 transition-colors" href="#">SYSTEMS</a>
+<a class="text-[10px] tracking-widest uppercase text-slate-500 hover:text-indigo-200 transition-colors" href="#">NETWORK</a>
+<a class="text-[10px] tracking-widest uppercase text-slate-500 hover:text-indigo-200 transition-colors" href="#">PRIVACY</a>
+<a class="text-[10px] tracking-widest uppercase text-slate-500 hover:text-indigo-200 transition-colors" href="#">PROTOCOL</a>
+</div>
+</footer>
+</main>
+<!-- BottomNavBar (Mobile only) -->
+<nav class="md:hidden fixed bottom-0 left-0 right-0 bg-slate-950/95 backdrop-blur-lg border-t border-outline-variant/10 px-6 py-4 flex justify-between items-center z-[100]">
+<span class="material-symbols-outlined text-primary" data-icon="monitoring">monitoring</span>
+<span class="material-symbols-outlined text-slate-500" data-icon="precision_manufacturing">precision_manufacturing</span>
+<span class="material-symbols-outlined text-slate-500" data-icon="bolt">bolt</span>
+<span class="material-symbols-outlined text-slate-500" data-icon="memory">memory</span>
+</nav>
+</body></html>

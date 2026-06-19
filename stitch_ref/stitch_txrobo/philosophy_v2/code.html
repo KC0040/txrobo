@@ -1,0 +1,293 @@
+<!DOCTYPE html>
+
+<html class="dark" lang="en"><head>
+<meta charset="utf-8"/>
+<meta content="width=device-width, initial-scale=1.0" name="viewport"/>
+<script src="https://cdn.tailwindcss.com?plugins=forms,container-queries"></script>
+<link href="https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@300;400;500;600;700&amp;family=Inter:wght@300;400;500;600&amp;display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/>
+<style>
+        .material-symbols-outlined {
+            font-variation-settings: 'FILL' 0, 'wght' 400, 'GRAD' 0, 'opsz' 24;
+        }
+        body {
+            font-family: 'Inter', sans-serif;
+            background-color: #0d131f;
+            color: #dde2f4;
+        }
+        h1, h2, h3, h4, .headline-font {
+            font-family: 'Space Grotesk', sans-serif;
+        }
+        .glass-card {
+            background: rgba(47, 53, 66, 0.4);
+            backdrop-filter: blur(12px);
+        }
+        .gradient-machined {
+            background: linear-gradient(135deg, #b2c5ff 0%, #2b6cee 100%);
+        }
+    </style>
+<script id="tailwind-config">
+        tailwind.config = {
+            darkMode: "class",
+            theme: {
+                extend: {
+                    "colors": {
+                        "on-secondary-fixed": "#151c25",
+                        "background": "#0d131f",
+                        "surface-dim": "#0d131f",
+                        "primary-container": "#2b6cee",
+                        "secondary-container": "#404752",
+                        "on-secondary-fixed-variant": "#404752",
+                        "on-secondary-container": "#afb5c2",
+                        "surface-tint": "#b2c5ff",
+                        "secondary-fixed-dim": "#c0c7d3",
+                        "surface-container-low": "#161c28",
+                        "on-surface": "#dde2f4",
+                        "outline-variant": "#424654",
+                        "inverse-on-surface": "#2a303d",
+                        "on-primary-fixed-variant": "#0040a2",
+                        "on-primary-fixed": "#001848",
+                        "tertiary": "#a4c9ff",
+                        "on-error": "#690005",
+                        "outline": "#8c90a0",
+                        "tertiary-container": "#2676c8",
+                        "inverse-surface": "#dde2f4",
+                        "on-primary-container": "#fdfbff",
+                        "surface-container-high": "#242a37",
+                        "surface": "#0d131f",
+                        "secondary-fixed": "#dce3f0",
+                        "on-primary": "#002b73",
+                        "surface-container": "#1a202c",
+                        "primary": "#b2c5ff",
+                        "on-tertiary-fixed": "#001c39",
+                        "surface-container-highest": "#2f3542",
+                        "on-tertiary": "#00315d",
+                        "tertiary-fixed-dim": "#a4c9ff",
+                        "primary-fixed-dim": "#b2c5ff",
+                        "tertiary-fixed": "#d4e3ff",
+                        "on-tertiary-fixed-variant": "#004883",
+                        "error-container": "#93000a",
+                        "inverse-primary": "#0055d3",
+                        "on-error-container": "#ffdad6",
+                        "on-tertiary-container": "#fcfbff",
+                        "surface-variant": "#2f3542",
+                        "primary-fixed": "#dae2ff",
+                        "error": "#ffb4ab",
+                        "on-secondary": "#2a313b",
+                        "on-surface-variant": "#c3c6d7",
+                        "surface-bright": "#333946",
+                        "secondary": "#c0c7d3",
+                        "on-background": "#dde2f4",
+                        "surface-container-lowest": "#080e1a"
+                    },
+                    "borderRadius": {
+                        "DEFAULT": "0.125rem",
+                        "lg": "0.25rem",
+                        "xl": "0.5rem",
+                        "full": "0.75rem"
+                    },
+                    "fontFamily": {
+                        "headline": ["Space Grotesk"],
+                        "display": ["Space Grotesk"],
+                        "body": ["Inter"],
+                        "label": ["Space Grotesk"]
+                    }
+                }
+            }
+        }
+    </script>
+<style>
+    body {
+      min-height: max(884px, 100dvh);
+    }
+  </style>
+  </head>
+<body class="bg-background text-on-surface selection:bg-primary-container selection:text-on-primary-container">
+<!-- TopAppBar -->
+<nav class="fixed top-0 left-0 right-0 z-50 bg-slate-950/80 backdrop-blur-xl shadow-[0_20px_50px_rgba(8,_112,_184,_0.05)]">
+<div class="flex justify-between items-center px-8 py-6 max-w-[1920px] mx-auto">
+<div class="flex items-center gap-6">
+<span class="material-symbols-outlined text-indigo-200 cursor-pointer" data-icon="menu">menu</span>
+<span class="font-['Space_Grotesk'] text-2xl font-black tracking-tighter text-indigo-200">TXROBO</span>
+</div>
+<div class="hidden md:flex gap-10 items-center">
+<a class="font-['Space_Grotesk'] uppercase tracking-[0.2em] text-xs font-bold text-slate-500 hover:text-slate-300 transition-all" href="#">FLEET</a>
+<a class="font-['Space_Grotesk'] uppercase tracking-[0.2em] text-xs font-bold text-slate-500 hover:text-slate-300 transition-all" href="#">PRECISION</a>
+<a class="font-['Space_Grotesk'] uppercase tracking-[0.2em] text-xs font-bold text-indigo-200 border-b-2 border-indigo-200 pb-1" href="#">KINETICS</a>
+<a class="font-['Space_Grotesk'] uppercase tracking-[0.2em] text-xs font-bold text-slate-500 hover:text-slate-300 transition-all" href="#">DASHBOARD</a>
+</div>
+<button class="bg-primary-container text-on-primary-container px-6 py-2 rounded-lg font-['Space_Grotesk'] font-bold tracking-wider text-sm transition-transform active:scale-95 duration-200 ease-out">
+                CONNECT
+            </button>
+</div>
+</nav>
+<main class="pt-24">
+<!-- Hero Section -->
+<section class="relative min-h-[795px] flex flex-col justify-center px-8 md:px-24 overflow-hidden">
+<div class="absolute inset-0 z-0">
+<img alt="Visionary Robotics" class="w-full h-full object-cover opacity-30 grayscale contrast-125" data-alt="A cinematic, low-angle shot of a sophisticated robotic exoskeleton standing in a dimly lit, high-tech industrial laboratory. The scene is bathed in deep indigo and midnight navy tones, with sharp pin-points of cool blue light reflecting off machined chrome surfaces. The atmosphere is quiet and reverent, emphasizing the precision engineering and future-forward aesthetic of autonomous labor solutions in a dark-mode palette." src="https://lh3.googleusercontent.com/aida-public/AB6AXuBTBreVIR6ikTczZDG2rEO2154rZ5f2pDuxMHHnBXPq_9dwfvlBD3bjxAS91QRE8jzxpcsPZOo5IvZafMevb1uK0P02QWxt-2Lx45pmnlmkPZiUPURQUnu_qAKbY1hbw7L8Mkt3XTrbwI1sZ3FyUXe3YvShVfYAQrf99YQQ8iZf5nP1Ke-dgybLAHleRzlxWQbODdqn_Ur8lbd84iKH2EoYdTMbmXpblWWkXBG6AFnuIx7w-oLfTLNVa2N9b7ioCqVystuwJZHeLon_"/>
+<div class="absolute inset-0 bg-gradient-to-t from-background via-transparent to-transparent"></div>
+</div>
+<div class="relative z-10 max-w-5xl">
+<p class="font-label uppercase tracking-[0.4em] text-primary text-xs mb-6 font-bold">The Precision Architect</p>
+<h1 class="font-display text-6xl md:text-9xl font-bold tracking-tighter leading-[0.85] mb-8 text-on-surface">
+                    BEYOND THE <br/> <span class="text-transparent bg-clip-text bg-gradient-to-r from-primary via-tertiary to-primary-container">KINETIC LIMIT.</span>
+</h1>
+<p class="font-body text-xl md:text-2xl text-on-surface-variant max-w-2xl leading-relaxed">
+                    We are engineering a future where labor is not a burden, but a precision collaboration between human intent and robotic execution.
+                </p>
+</div>
+</section>
+<!-- Vision Narrative -->
+<section class="py-32 px-8 md:px-24 bg-surface-container-low">
+<div class="max-w-7xl mx-auto grid md:grid-cols-2 gap-24 items-start">
+<div class="space-y-12">
+<h2 class="font-display text-4xl md:text-5xl font-bold tracking-tight text-primary">THE FUTURE OF LABOR.</h2>
+<div class="space-y-6 font-body text-lg leading-relaxed text-on-surface-variant">
+<p>
+                            At TXROBO, we view the automation of physical labor not as a replacement for human capability, but as its ultimate extension. The "Kinetic Divide"—the gap between cognitive desire and physical exertion—is where we operate.
+                        </p>
+<p>
+                            Our philosophy is rooted in the belief that machines should shoulder the repetitive, the hazardous, and the mundane, freeing the human spirit to focus on creativity, strategy, and empathy. This is the new architecture of productivity.
+                        </p>
+<p>
+                            We don't build tools; we build partners. Every sensor we calibrate and every actuator we tune is designed to harmonize with the human environment, respecting the delicate balance of industrial ecosystems.
+                        </p>
+</div>
+</div>
+<!-- The Data Monolith -->
+<div class="bg-surface-container-lowest p-12 rounded-xl shadow-2xl relative overflow-hidden group">
+<div class="absolute top-0 right-0 w-32 h-32 bg-primary/10 blur-3xl rounded-full transition-all group-hover:bg-primary/20"></div>
+<h3 class="font-label text-xs tracking-widest text-primary mb-8 font-bold">SYSTEM SPECIFICATIONS // V.24</h3>
+<div class="space-y-8">
+<div class="flex justify-between items-end border-b border-outline-variant/20 pb-4">
+<span class="font-label text-xs text-slate-500">AUTONOMY SCORE</span>
+<span class="font-display text-3xl font-bold text-on-surface">99.8%</span>
+</div>
+<div class="flex justify-between items-end border-b border-outline-variant/20 pb-4">
+<span class="font-label text-xs text-slate-500">REACTION LATENCY</span>
+<span class="font-display text-3xl font-bold text-on-surface">2.4ms</span>
+</div>
+<div class="flex justify-between items-end border-b border-outline-variant/20 pb-4">
+<span class="font-label text-xs text-slate-500">ETHICAL ALIGNMENT</span>
+<span class="font-display text-3xl font-bold text-on-surface">STRICT</span>
+</div>
+</div>
+<div class="mt-12">
+<img alt="Engineering Precision" class="w-full h-48 object-cover rounded-lg grayscale hover:grayscale-0 transition-all duration-700" data-alt="A high-resolution macro shot of a complex robotic joint featuring interlocking gears, carbon fiber struts, and glowing amber wiring. The lighting is focused and dramatic, highlighting the microscopic textures of the machined aluminum components. The overall aesthetic is one of extreme technical precision and high-end industrial design, set against a dark, minimalist laboratory background with soft blue ambient glow." src="https://lh3.googleusercontent.com/aida-public/AB6AXuDvvOBHEbvh68qihz5HaUGz_LSZ3i9dDeDxWnTclWr5NbssrQk_TlHm2NHcttBPezOUSz1fGl3K-gvJbqGbn5SPwgZzTzqFC5diVu4XvTpcJ0iWm_Uuy3k7L2yZK_t06X9SCNqHUc1wX9xxQCh69p-h6iMEapQBTx4vjqzj_rYiFAUS8VebLtNFfw8Ayouj9Py-FJFR_FRGIXJnalV2ly75Q0_AyfHxwzBB59FYwtq3f07vbm-3DY_a2Gnt-6dXvWlabOiFJxU8-U1l"/>
+</div>
+</div>
+</div>
+</section>
+<!-- Core Pillars (Bento Grid) -->
+<section class="py-32 px-8 md:px-24">
+<div class="max-w-7xl mx-auto">
+<div class="mb-20">
+<h2 class="font-display text-5xl font-bold tracking-tighter mb-4">OUR ARCHITECTURAL <span class="text-tertiary">PILLARS.</span></h2>
+<p class="text-slate-500 font-body text-xl max-w-xl">The guiding principles that ensure every TXROBO system operates within our ethical and functional framework.</p>
+</div>
+<div class="grid grid-cols-1 md:grid-cols-3 gap-8">
+<!-- Collaboration -->
+<div class="md:col-span-2 glass-card p-12 rounded-xl flex flex-col justify-between group hover:bg-surface-container-high transition-all">
+<div>
+<span class="material-symbols-outlined text-4xl text-primary mb-8" data-icon="groups">groups</span>
+<h3 class="font-display text-3xl font-bold mb-4">SYMBIO-KINETICS</h3>
+<p class="font-body text-on-surface-variant leading-relaxed text-lg max-w-lg">
+                                We prioritize fluid collaboration over rigid automation. Our systems are designed to detect human intent and adapt their torque, speed, and trajectory in real-time, creating a seamless physical workflow.
+                            </p>
+</div>
+<div class="mt-12 flex gap-4">
+<span class="px-4 py-2 bg-surface-container-highest rounded-full text-[10px] font-bold tracking-widest uppercase">REAL-TIME HAPTICS</span>
+<span class="px-4 py-2 bg-surface-container-highest rounded-full text-[10px] font-bold tracking-widest uppercase">INTENT-PREDICTION AI</span>
+</div>
+</div>
+<!-- Precision -->
+<div class="bg-primary-container p-12 rounded-xl flex flex-col justify-between text-on-primary-container">
+<div>
+<span class="material-symbols-outlined text-4xl mb-8" data-icon="biotech">biotech</span>
+<h3 class="font-display text-3xl font-bold mb-4">MICRON PRECISION</h3>
+<p class="font-body opacity-90 leading-relaxed">
+                                Reliability is the foundation of trust. We engineer systems that maintain surgical precision across millions of cycles, ensuring safety and performance in the most demanding environments.
+                            </p>
+</div>
+<div class="mt-8">
+<span class="font-display text-6xl font-bold">1:1,000,000</span>
+<p class="text-[10px] font-bold uppercase tracking-widest mt-2">Error Margin Threshold</p>
+</div>
+</div>
+<!-- Ethics -->
+<div class="bg-surface-container-low p-12 rounded-xl border border-outline-variant/10 group hover:border-primary/40 transition-all">
+<span class="material-symbols-outlined text-4xl text-tertiary mb-8" data-icon="balance">balance</span>
+<h3 class="font-display text-2xl font-bold mb-4">THE ETHICAL FRAMEWORK</h3>
+<p class="font-body text-on-surface-variant leading-relaxed">
+                            Every algorithm in the TXROBO stack is bounded by a human-first safety protocol. We believe in transparency of decision-making and the absolute primacy of human safety above efficiency.
+                        </p>
+</div>
+<!-- Resilience -->
+<div class="md:col-span-2 relative rounded-xl overflow-hidden min-h-[400px]">
+<img alt="Advanced AI" class="absolute inset-0 w-full h-full object-cover grayscale transition-transform duration-1000 group-hover:scale-105" data-alt="A sprawling top-down view of a futuristic, dark-mode automated warehouse. Massive robotic arms with matte black finishes move with surgical grace along glowing paths of neon blue. The environment is impeccably clean, with deep shadows and reflective polished floors creating a sense of infinite scale and high-tech efficiency. Soft atmospheric haze catches the light from overhead diagnostic screens." src="https://lh3.googleusercontent.com/aida-public/AB6AXuCkhlrQq3o735_ntE84KI1QlYyiDPIS8UCuL_PJHCrkG7FOBlyIeJ81necYm5d3oC4NHww0rVANb_DPWFE41TiwN-vltEWroef88f-f0XNJu5zsDOUhHnCCtyJA7PSR-UFT6NUxocp0w3yMgHQs5bZONHIHbzpCoE4_eGKpB7ONAbXvAdaKuIcm_WpG2c9AHam3XfU5YQQegxLlVU98247otOyBycO8Y4uZH6WUzZRUKLzSNjl3gHkfWb2nQDEVWQ0lo9QzBdf9hryW"/>
+<div class="absolute inset-0 bg-gradient-to-r from-background to-transparent flex items-center p-12">
+<div class="max-w-md">
+<h3 class="font-display text-3xl font-bold mb-4">ENVIRONMENTAL RESILIENCE</h3>
+<p class="font-body text-on-surface-variant">Systems engineered for the extremes—from sub-zero industrial storage to high-heat manufacturing zones, TXROBO maintains peak performance where others fail.</p>
+</div>
+</div>
+</div>
+</div>
+</div>
+</section>
+<!-- Long-form Editorial Segment -->
+<section class="py-32 px-8 md:px-24 bg-surface-container-lowest">
+<div class="max-w-3xl mx-auto">
+<article class="prose prose-invert prose-indigo max-w-none">
+<h2 class="font-display text-4xl md:text-5xl font-bold text-on-surface mb-12">THE COLLABORATIVE REVOLUTION.</h2>
+<p class="font-body text-xl text-on-surface-variant leading-relaxed mb-8">
+                        The history of labor is a history of tools. From the first steam engines to the assembly line, technology has always reshaped the way we interact with the world. But we have reached a plateau where traditional automation is no longer enough.
+                    </p>
+<p class="font-body text-xl text-on-surface-variant leading-relaxed mb-12">
+                        Today, the challenge is not just "doing more" but "being better." TXROBO is at the forefront of this shift, moving from static machines to dynamic, intelligent partners that can learn, adapt, and predict. This isn't just about robots; it's about the evolution of the workplace into a high-clarity, high-safety, and high-fulfillment environment.
+                    </p>
+<blockquote class="border-l-4 border-primary pl-8 my-16">
+<p class="font-display text-3xl italic font-light text-primary">"The machine does not replace the artisan; it preserves the artisan's vision from the exhaustion of the mundane."</p>
+<cite class="block mt-4 font-label text-xs tracking-widest text-slate-500 uppercase">— CHIEF KINETIC ARCHITECT, TXROBO</cite>
+</blockquote>
+<p class="font-body text-xl text-on-surface-variant leading-relaxed">
+                        As we look toward the 2030 horizon, our vision remains constant: to eliminate the phrase "back-breaking labor" from the human dictionary. By integrating advanced AI with hyper-responsive hardware, we are making that future a reality today.
+                    </p>
+</article>
+</div>
+</section>
+<!-- Call to Action -->
+<section class="py-40 px-8 text-center relative overflow-hidden">
+<div class="absolute inset-0 z-0 bg-primary/5 blur-[120px] rounded-full scale-150"></div>
+<div class="relative z-10">
+<h2 class="font-display text-5xl md:text-7xl font-bold tracking-tighter mb-8">JOIN THE <span class="text-primary">VANGUARD.</span></h2>
+<p class="font-body text-xl text-on-surface-variant mb-12 max-w-2xl mx-auto">Discover how TXROBO kinetics can transform your operational infrastructure with unparalleled precision and ethical intelligence.</p>
+<div class="flex flex-col md:flex-row gap-6 justify-center">
+<button class="gradient-machined text-on-primary-container px-10 py-4 rounded-lg font-display font-bold tracking-widest text-sm hover:shadow-[0_0_30px_rgba(43,108,238,0.4)] transition-all">
+                        DEPLOY SYSTEMS
+                    </button>
+<button class="bg-surface-variant/40 backdrop-blur-xl border border-outline-variant/30 text-on-surface px-10 py-4 rounded-lg font-display font-bold tracking-widest text-sm hover:bg-surface-variant/60 transition-all">
+                        VIEW PROTOCOLS
+                    </button>
+</div>
+</div>
+</section>
+</main>
+<!-- Footer -->
+<footer class="bg-slate-950 w-full py-12 px-8">
+<div class="max-w-[1920px] mx-auto flex flex-col md:flex-row justify-between items-center border-t border-slate-800/20 pt-12">
+<div class="mb-8 md:mb-0">
+<span class="font-['Space_Grotesk'] font-bold text-slate-200 text-xl tracking-tighter">TXROBO KINETICS</span>
+<p class="font-['Inter'] text-[10px] tracking-widest uppercase text-slate-500 mt-2">© 2024 TXROBO KINETICS. ENGINEERED FOR PRECISION.</p>
+</div>
+<div class="flex gap-8">
+<a class="font-['Inter'] text-[10px] tracking-widest uppercase text-slate-500 hover:text-indigo-200 transition-colors" href="#">SYSTEMS</a>
+<a class="font-['Inter'] text-[10px] tracking-widest uppercase text-slate-500 hover:text-indigo-200 transition-colors" href="#">NETWORK</a>
+<a class="font-['Inter'] text-[10px] tracking-widest uppercase text-slate-500 hover:text-indigo-200 transition-colors" href="#">PRIVACY</a>
+<a class="font-['Inter'] text-[10px] tracking-widest uppercase text-slate-500 hover:text-indigo-200 transition-colors" href="#">PROTOCOL</a>
+</div>
+</div>
+</footer>
+</body></html>

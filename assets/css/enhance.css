@@ -1,0 +1,85 @@
+/* TXRobo 版面動效強化 — 搭配 enhance.js */
+
+/* 捲動進場 */
+.tx-reveal {
+  opacity: 0;
+  transform: translateY(28px);
+  transition: opacity 0.7s cubic-bezier(0.2, 0.8, 0.2, 1), transform 0.7s cubic-bezier(0.2, 0.8, 0.2, 1);
+  will-change: opacity, transform;
+}
+.tx-reveal.tx-in {
+  opacity: 1;
+  transform: none;
+}
+
+/* 卡片微互動：浮起 + 邊框亮起 */
+.state-card, .sol-card, .p-card, .blog-card {
+  transition: transform 0.35s cubic-bezier(0.2, 0.8, 0.2, 1), box-shadow 0.35s ease, border-color 0.35s ease;
+}
+.state-card:hover, .sol-card:hover, .p-card:hover, .blog-card:hover {
+  transform: translateY(-6px);
+  box-shadow: 0 18px 40px rgba(0, 0, 0, 0.45), 0 0 0 1px rgba(178, 197, 255, 0.25);
+}
+
+/* 按鈕互動 */
+a[class*="btn"], button[class*="btn"] {
+  transition: transform 0.25s ease, box-shadow 0.25s ease, filter 0.25s ease;
+}
+a[class*="btn"]:hover, button[class*="btn"]:hover {
+  transform: translateY(-2px);
+  filter: brightness(1.06);
+}
+a[class*="btn"]:active, button[class*="btn"]:active {
+  transform: translateY(0);
+}
+
+/* 導覽列捲動加深 */
+.tx-nav-scrolled {
+  background: rgba(13, 19, 31, 0.92) !important;
+  backdrop-filter: blur(18px);
+  box-shadow: 0 1px 0 rgba(178, 197, 255, 0.12), 0 8px 30px rgba(0, 0, 0, 0.35);
+}
+
+/* 圖片 hover 微縮放（卡片內） */
+.p-card img, .blog-card img, .p-card-img, .blog-card-img {
+  transition: transform 0.6s cubic-bezier(0.2, 0.8, 0.2, 1);
+}
+.p-card:hover img, .blog-card:hover img {
+  transform: scale(1.04);
+}
+
+/* 選取文字配色 */
+::selection {
+  background: #2b6cee;
+  color: #fff;
+}
+
+/* ── 展示級動畫（showcase.js）── */
+
+/* 頂部捲動進度條 — 品牌漸層 */
+#tx-progress {
+  position: fixed;
+  top: 0; left: 0;
+  width: 100%; height: 3px;
+  background: linear-gradient(90deg, #b2c5ff 0%, #2b6cee 100%);
+  transform-origin: 0 50%;
+  transform: scaleX(0);
+  z-index: 9999;
+  pointer-events: none;
+}
+
+/* Hero 粒子網絡畫布 */
+#tx-net {
+  position: absolute;
+  inset: 0;
+  pointer-events: none;
+  z-index: 0;
+}
+.hero > *:not(#tx-net) { position: relative; z-index: 1; }
+
+/* 3D 傾斜卡片 — transform 交給 JS，這裡只管回彈 */
+.tx-tilt { transition: transform 0.35s cubic-bezier(0.2, 0.8, 0.2, 1), box-shadow 0.35s ease, border-color 0.35s ease; }
+.tx-tilt:hover { transition: box-shadow 0.35s ease, border-color 0.35s ease; }
+
+/* 磁吸按鈕回彈 */
+a[class*="btn"], button[class*="btn"] { transition: transform 0.3s cubic-bezier(0.2, 0.8, 0.2, 1), filter 0.25s ease; }

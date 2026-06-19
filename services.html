@@ -1,0 +1,602 @@
+<!DOCTYPE html>
+<html lang="en" class="dark">
+<head>
+  <meta charset="utf-8"/>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>TXROBO Services — Robot Deployment, Maintenance &amp; Support | Texas</title>
+  <meta name="description" content="Full-service robot deployment across Texas and Southwest USA. Includes installation, staff training, ongoing maintenance, and same-day on-site support."/>
+  <link rel="canonical" href="https://www.txrobo.com/services"/>
+  <link rel="preconnect" href="https://fonts.googleapis.com"/>
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin/>
+  <link href="https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@300;400;500;600;700;800;900&family=DM+Mono:wght@300;400;500&family=Inter:wght@300;400;500;600&display=swap" rel="stylesheet"/>
+  <link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@24,300,0,0&display=swap" rel="stylesheet"/>
+  <link rel="stylesheet" href="assets/css/txrobo.css"/>
+  <script src="https://cdn.tailwindcss.com"></script>
+  <script>
+    tailwind.config = { darkMode:'class', theme:{ extend:{ colors:{ 'bg':'#0d131f','bg-low':'#080e1a','surf':'#161c28','surf-mid':'#1a202c','surf-high':'#242a37','primary':'#b2c5ff','primary-btn':'#2b6cee','on-surf':'#dde2f4','on-surf-2':'#c3c6d7','on-surf-3':'#8c90a0','border':'#424654' }, fontFamily:{ display:['Space Grotesk','sans-serif'], mono:['DM Mono','monospace'], body:['Inter','sans-serif'] } } } }
+  </script>
+  <style>
+    /* ── State cards ── */
+    .state-cards { display: grid; grid-template-columns: repeat(3,1fr); gap: 10px; }
+    @media (max-width: 640px) { .state-cards { grid-template-columns: repeat(2,1fr); } }
+    .state-card { background: #161c28; border-radius: 10px; padding: 16px; transition: background 0.2s; }
+    .state-card:hover { background: #1a202c; }
+    .state-card.primary-state { background: rgba(43,108,238,0.1); border: 1px solid rgba(43,108,238,0.2); }
+    .state-name { font-family: 'Space Grotesk'; font-size: 13px; font-weight: 700; color: #dde2f4; }
+    .state-abbr { font-family: 'DM Mono'; font-size: 10px; letter-spacing: 0.1em; color: #424654; margin-top: 3px; }
+    .state-status { display: inline-block; margin-top: 8px; padding: 2px 7px; border-radius: 100px; font-family: 'DM Mono'; font-size: 9px; letter-spacing: 0.07em; }
+    .status-active { background: rgba(52,211,153,0.1); color: #34d399; border: 1px solid rgba(52,211,153,0.15); }
+    .status-expanding { background: rgba(178,197,255,0.07); color: #b2c5ff; border: 1px solid rgba(178,197,255,0.12); }
+
+    /* ── Service cards grid ── */
+    .svc-grid { display: grid; grid-template-columns: repeat(2,1fr); gap: 20px; }
+    @media (max-width: 768px) { .svc-grid { grid-template-columns: 1fr; } }
+    .svc-card { background: #161c28; border-radius: 14px; padding: 32px; border: 1px solid rgba(66,70,84,0.3); transition: border-color 0.2s, transform 0.2s, box-shadow 0.2s; }
+    .svc-card:hover { border-color: rgba(178,197,255,0.15); transform: translateY(-4px); box-shadow: 0 20px 50px rgba(0,0,0,0.35); }
+    .svc-icon-wrap { width: 52px; height: 52px; border-radius: 13px; display: flex; align-items: center; justify-content: center; margin-bottom: 22px; }
+    .svc-badge { display: inline-flex; align-items: center; gap: 5px; padding: 3px 9px; border-radius: 100px; font-family: 'DM Mono'; font-size: 9px; letter-spacing: 0.07em; text-transform: uppercase; margin-bottom: 14px; }
+    .svc-title { font-family: 'Space Grotesk'; font-size: 1.25rem; font-weight: 800; color: #dde2f4; letter-spacing: -0.02em; margin-bottom: 12px; }
+    .svc-desc { font-size: 14px; color: #8c90a0; line-height: 1.7; margin-bottom: 20px; }
+    .svc-cities { font-family: 'DM Mono'; font-size: 10px; letter-spacing: 0.06em; color: #424654; }
+
+    /* ── Process steps ── */
+    .steps-grid { display: grid; grid-template-columns: repeat(3,1fr); gap: 0; position: relative; }
+    @media (max-width: 900px) { .steps-grid { grid-template-columns: repeat(2,1fr); } }
+    @media (max-width: 560px) { .steps-grid { grid-template-columns: 1fr; } }
+    .step-item { padding: 32px 28px; position: relative; }
+    .step-item:not(:last-child)::after { content:''; position:absolute; top:52px; right:0; width:1px; height:40%; background: rgba(66,70,84,0.35); }
+    @media (max-width: 560px) { .step-item:not(:last-child)::after { display:none; } }
+    .step-num { font-family: 'Space Grotesk'; font-size: 3rem; font-weight: 900; color: rgba(66,70,84,0.4); letter-spacing: -0.04em; line-height: 1; margin-bottom: 16px; }
+    .step-icon-wrap { width: 44px; height: 44px; border-radius: 11px; display: flex; align-items: center; justify-content: center; margin-bottom: 14px; }
+    .step-title { font-family: 'Space Grotesk'; font-size: 1rem; font-weight: 700; color: #dde2f4; margin-bottom: 8px; letter-spacing: -0.01em; }
+    .step-desc { font-size: 13px; color: #8c90a0; line-height: 1.65; }
+    .step-detail { font-family: 'DM Mono'; font-size: 10px; letter-spacing: 0.06em; color: #b2c5ff; margin-top: 8px; }
+
+    /* ── Comparison table ── */
+    .comp-table { width: 100%; border-collapse: collapse; }
+    .comp-table th { padding: 16px 20px; font-family: 'Space Grotesk'; font-size: 13px; font-weight: 700; letter-spacing: -0.01em; text-align: left; border-bottom: 1px solid rgba(66,70,84,0.4); }
+    .comp-table th:first-child { color: #8c90a0; }
+    .comp-table th.txrobo-col { color: #b2c5ff; background: rgba(178,197,255,0.04); border-radius: 10px 10px 0 0; }
+    .comp-table td { padding: 14px 20px; font-size: 13px; border-bottom: 1px solid rgba(66,70,84,0.2); transition: background 0.15s; }
+    .comp-table tr:hover td { background: rgba(178,197,255,0.02); }
+    .comp-table tr:last-child td { border-bottom: none; }
+    .comp-table td:first-child { color: #c3c6d7; font-weight: 500; }
+    .comp-table td.basic-col { color: #424654; }
+    .comp-table td.txrobo-col { color: #34d399; background: rgba(178,197,255,0.03); font-weight: 600; }
+    .comp-check { display: inline-flex; align-items: center; gap: 6px; }
+
+    /* ── Geo section ── */
+    .geo-grid { display: grid; grid-template-columns: 1fr 1fr; gap: 80px; align-items: start; }
+    @media (max-width: 900px) { .geo-grid { grid-template-columns: 1fr; gap: 40px; } }
+  </style>
+  <link rel="stylesheet" href="assets/css/enhance.css">
+</head>
+<body>
+<div id="page-wrapper">
+
+<!-- ═══════════════ NAVBAR ═══════════════ -->
+<header id="navbar">
+  <div class="nav-inner">
+    <a href="index.html" class="logo">
+      <img src="https://res.cloudinary.com/dchlhfrdi/image/upload/txrobo/TXROBO-LOGO.webp" alt="TXROBO" style="height:32px;width:auto;" onerror="this.style.display='none';this.nextElementSibling.style.display='block'"/>
+      <span class="logo-text" style="display:none">TX<span>ROBO</span></span>
+    </a>
+    <nav class="nav-links">
+      <a href="index.html" class="nav-link">Home</a>
+      <a href="products.html" class="nav-link">Products</a>
+      <a href="solutions.html" class="nav-link">Solutions</a>
+      <a href="blog.html" class="nav-link">Blog</a>
+      <a href="about.html" class="nav-link">About</a>
+      <a href="contact.html" class="nav-link">Contact</a>
+    </nav>
+    <div style="display:flex;align-items:center;gap:10px;">
+      <button class="nav-ai-btn" onclick="toggleAI()" id="nav-ai-btn"><span class="pulse-dot"></span>ASK AI</button>
+      <a href="contact.html" class="nav-demo">Book Demo</a>
+    </div>
+  </div>
+</header>
+
+<!-- ═══════════════ HERO ═══════════════ -->
+<section class="page-hero dot-grid">
+  <div class="page-hero-glow left"></div>
+  <div class="page-hero-glow right"></div>
+  <div class="page-hero-inner">
+    <div class="page-eyebrow">
+      <span class="material-symbols-outlined" style="font-size:13px">support_agent</span>
+      // End-to-End Service
+    </div>
+    <h1 class="page-hero-title">Everything Included.<br/><span style="color:#b2c5ff">Nothing Hidden.</span></h1>
+    <p class="page-hero-sub">TXROBO doesn't just sell robots — we partner with your Texas business from day one. Deployment, training, maintenance, and support, all included in one monthly plan.</p>
+    <div style="display:flex;gap:12px;flex-wrap:wrap;margin-top:12px;">
+      <a href="contact.html" class="btn-machined" style="padding:13px 24px;border-radius:8px;font-size:14px;display:inline-flex;align-items:center;gap:8px;text-decoration:none;">
+        <span class="material-symbols-outlined" style="font-size:16px">calendar_month</span>
+        Get Started Today
+      </a>
+      <a href="tel:2144549356" class="btn-ghost" style="padding:13px 24px;border-radius:8px;font-size:14px;display:inline-flex;align-items:center;gap:8px;text-decoration:none;">
+        <span class="material-symbols-outlined" style="font-size:16px">call</span>
+        214-454-9356
+      </a>
+    </div>
+  </div>
+</section>
+
+<!-- ═══════════════ CORE SERVICES GRID ═══════════════ -->
+<section class="sec" style="background:#0d131f;">
+  <div class="wrap">
+    <div style="text-align:center;margin-bottom:60px;">
+      <div class="sec-label" style="justify-content:center;display:flex;">// Core Services</div>
+      <h2 class="sec-title" style="max-width:480px;margin:0 auto 14px;">Four pillars.<br/>One monthly plan.</h2>
+      <p class="sec-desc" style="max-width:480px;margin:0 auto;">Every TXROBO rental includes deployment, maintenance, support, and monitoring — no surprise charges, ever.</p>
+    </div>
+
+    <div class="svc-grid">
+
+      <!-- Deployment -->
+      <div class="svc-card">
+        <div class="svc-icon-wrap" style="background:rgba(43,108,238,0.15);">
+          <span class="material-symbols-outlined" style="color:#6b9fff;font-size:26px">rocket_launch</span>
+        </div>
+        <div class="svc-badge" style="background:rgba(43,108,238,0.1);color:#6b9fff;border:1px solid rgba(43,108,238,0.2);">
+          <span class="material-symbols-outlined" style="font-size:10px">schedule</span>
+          1–3 Days
+        </div>
+        <div class="svc-title">Deployment</div>
+        <p class="svc-desc">On-site delivery, full floor mapping, route programming, and comprehensive staff training. We handle everything from unboxing to go-live.</p>
+        <div style="display:flex;flex-direction:column;gap:8px;margin-bottom:20px;">
+          <div class="check-item"><div class="check-icon"><span class="material-symbols-outlined" style="font-size:12px;color:#34d399">check</span></div>On-site delivery and unboxing</div>
+          <div class="check-item"><div class="check-icon"><span class="material-symbols-outlined" style="font-size:12px;color:#34d399">check</span></div>Complete floor mapping and route programming</div>
+          <div class="check-item"><div class="check-icon"><span class="material-symbols-outlined" style="font-size:12px;color:#34d399">check</span></div>Staff training (2–4 hours on-site)</div>
+          <div class="check-item"><div class="check-icon"><span class="material-symbols-outlined" style="font-size:12px;color:#34d399">check</span></div>Go-live verification and sign-off</div>
+        </div>
+        <div style="border-top:1px solid rgba(66,70,84,0.3);padding-top:16px;">
+          <div class="svc-cities">Covers: DFW · Houston · Austin · San Antonio · OKC · New Orleans · Albuquerque · Little Rock</div>
+        </div>
+      </div>
+
+      <!-- Maintenance -->
+      <div class="svc-card">
+        <div class="svc-icon-wrap" style="background:rgba(245,158,11,0.13);">
+          <span class="material-symbols-outlined" style="color:#fbbf24;font-size:26px">build</span>
+        </div>
+        <div class="svc-badge" style="background:rgba(245,158,11,0.1);color:#fbbf24;border:1px solid rgba(245,158,11,0.2);">
+          <span class="material-symbols-outlined" style="font-size:10px">check_circle</span>
+          All Included
+        </div>
+        <div class="svc-title">Maintenance</div>
+        <p class="svc-desc">Regular hardware checks, firmware updates, sensor calibration, and physical inspections. All maintenance is fully covered in the monthly rental plan — zero surprise fees.</p>
+        <div style="display:flex;flex-direction:column;gap:8px;margin-bottom:20px;">
+          <div class="check-item"><div class="check-icon"><span class="material-symbols-outlined" style="font-size:12px;color:#34d399">check</span></div>Regular hardware inspections</div>
+          <div class="check-item"><div class="check-icon"><span class="material-symbols-outlined" style="font-size:12px;color:#34d399">check</span></div>Firmware and software updates</div>
+          <div class="check-item"><div class="check-icon"><span class="material-symbols-outlined" style="font-size:12px;color:#34d399">check</span></div>LIDAR and sensor recalibration</div>
+          <div class="check-item"><div class="check-icon"><span class="material-symbols-outlined" style="font-size:12px;color:#34d399">check</span></div>Battery health management</div>
+        </div>
+        <div style="border-top:1px solid rgba(66,70,84,0.3);padding-top:16px;">
+          <div class="svc-cities">Included: No additional maintenance fees, ever.</div>
+        </div>
+      </div>
+
+      <!-- Support -->
+      <div class="svc-card">
+        <div class="svc-icon-wrap" style="background:rgba(52,211,153,0.12);">
+          <span class="material-symbols-outlined" style="color:#34d399;font-size:26px">support_agent</span>
+        </div>
+        <div class="svc-badge" style="background:rgba(52,211,153,0.1);color:#34d399;border:1px solid rgba(52,211,153,0.2);">
+          <span class="material-symbols-outlined" style="font-size:10px">flash_on</span>
+          Same-Day
+        </div>
+        <div class="svc-title">Support</div>
+        <p class="svc-desc">Local TXROBO technician teams stationed in every service city. Same-day on-site response guaranteed. Spare units kept on standby to ensure zero downtime for your operation.</p>
+        <div style="display:flex;flex-direction:column;gap:8px;margin-bottom:20px;">
+          <div class="check-item"><div class="check-icon"><span class="material-symbols-outlined" style="font-size:12px;color:#34d399">check</span></div>Local technicians in every service city</div>
+          <div class="check-item"><div class="check-icon"><span class="material-symbols-outlined" style="font-size:12px;color:#34d399">check</span></div>Same-day on-site response</div>
+          <div class="check-item"><div class="check-icon"><span class="material-symbols-outlined" style="font-size:12px;color:#34d399">check</span></div>Spare units on standby</div>
+          <div class="check-item"><div class="check-icon"><span class="material-symbols-outlined" style="font-size:12px;color:#34d399">check</span></div>Zero-downtime commitment</div>
+        </div>
+        <div style="border-top:1px solid rgba(66,70,84,0.3);padding-top:16px;">
+          <div class="svc-cities">Direct line: <a href="tel:2144549356" style="color:#b2c5ff;text-decoration:none;">214-454-9356</a></div>
+        </div>
+      </div>
+
+      <!-- Monitoring -->
+      <div class="svc-card">
+        <div class="svc-icon-wrap" style="background:rgba(139,92,246,0.15);">
+          <span class="material-symbols-outlined" style="color:#a78bfa;font-size:26px">monitor_heart</span>
+        </div>
+        <div class="svc-badge" style="background:rgba(139,92,246,0.12);color:#a78bfa;border:1px solid rgba(139,92,246,0.2);">
+          <span class="material-symbols-outlined" style="font-size:10px">visibility</span>
+          24/7
+        </div>
+        <div class="svc-title">Remote Monitoring</div>
+        <p class="svc-desc">Our team monitors your fleet remotely around the clock. Battery alerts, navigation anomalies, and error notifications are flagged and resolved — often before you notice a problem.</p>
+        <div style="display:flex;flex-direction:column;gap:8px;margin-bottom:20px;">
+          <div class="check-item"><div class="check-icon"><span class="material-symbols-outlined" style="font-size:12px;color:#34d399">check</span></div>24/7 fleet monitoring dashboard</div>
+          <div class="check-item"><div class="check-icon"><span class="material-symbols-outlined" style="font-size:12px;color:#34d399">check</span></div>Battery level and charge alerts</div>
+          <div class="check-item"><div class="check-icon"><span class="material-symbols-outlined" style="font-size:12px;color:#34d399">check</span></div>Navigation and error notifications</div>
+          <div class="check-item"><div class="check-icon"><span class="material-symbols-outlined" style="font-size:12px;color:#34d399">check</span></div>Proactive intervention before downtime</div>
+        </div>
+        <div style="border-top:1px solid rgba(66,70,84,0.3);padding-top:16px;">
+          <div class="svc-cities">Remote ops center · Always on · No action required from you</div>
+        </div>
+      </div>
+
+    </div>
+  </div>
+</section>
+
+<!-- ═══════════════ HOW IT WORKS ═══════════════ -->
+<section class="sec" style="background:#161c28;">
+  <div class="wrap">
+    <div style="text-align:center;margin-bottom:60px;">
+      <div class="sec-label" style="justify-content:center;display:flex;">// Deployment Process</div>
+      <h2 class="sec-title" style="max-width:480px;margin:0 auto 14px;">From call to<br/>fully operational.</h2>
+      <p class="sec-desc" style="max-width:480px;margin:0 auto;">Most businesses are up and running within 3 business days. Here's exactly what happens after you reach out.</p>
+    </div>
+
+    <div class="steps-grid">
+
+      <div class="step-item">
+        <div class="step-num">01</div>
+        <div class="step-icon-wrap" style="background:rgba(43,108,238,0.15);">
+          <span class="material-symbols-outlined" style="color:#6b9fff;font-size:22px">call</span>
+        </div>
+        <div class="step-title">Call Us</div>
+        <p class="step-desc">Reach out by phone, email, or through our contact form. Tell us your business type, location, and operational needs.</p>
+        <div class="step-detail"><a href="tel:2144549356" style="color:#b2c5ff;text-decoration:none;">214-454-9356</a></div>
+      </div>
+
+      <div class="step-item">
+        <div class="step-num">02</div>
+        <div class="step-icon-wrap" style="background:rgba(52,211,153,0.12);">
+          <span class="material-symbols-outlined" style="color:#34d399;font-size:22px">location_on</span>
+        </div>
+        <div class="step-title">Site Assessment</div>
+        <p class="step-desc">Our local technician visits your site to assess floor layout, navigation requirements, and optimal robot placement. Same day or next business day.</p>
+        <div class="step-detail">SAME DAY OR NEXT DAY</div>
+      </div>
+
+      <div class="step-item">
+        <div class="step-num">03</div>
+        <div class="step-icon-wrap" style="background:rgba(245,158,11,0.13);">
+          <span class="material-symbols-outlined" style="color:#fbbf24;font-size:22px">local_shipping</span>
+        </div>
+        <div class="step-title">Robot Delivered</div>
+        <p class="step-desc">Your robot is transported to your location, unboxed, and physically set up by our team. No freight coordination required on your end.</p>
+        <div class="step-detail">1–3 BUSINESS DAYS</div>
+      </div>
+
+      <div class="step-item">
+        <div class="step-num">04</div>
+        <div class="step-icon-wrap" style="background:rgba(139,92,246,0.15);">
+          <span class="material-symbols-outlined" style="color:#a78bfa;font-size:22px">school</span>
+        </div>
+        <div class="step-title">Training Completed</div>
+        <p class="step-desc">Our technician spends 2–4 hours on-site training your staff on robot operation, calling commands, and basic troubleshooting. No tech background needed.</p>
+        <div class="step-detail">2–4 HOURS ON-SITE</div>
+      </div>
+
+      <div class="step-item">
+        <div class="step-num">05</div>
+        <div class="step-icon-wrap" style="background:rgba(178,197,255,0.1);">
+          <span class="material-symbols-outlined" style="color:#b2c5ff;font-size:22px">rocket_launch</span>
+        </div>
+        <div class="step-title">Go Live</div>
+        <p class="step-desc">Your robot begins serving customers, delivering orders, or disinfecting spaces. We verify everything runs perfectly before we leave the site.</p>
+        <div class="step-detail">DAY 1 — FULL OPERATION</div>
+      </div>
+
+      <div class="step-item">
+        <div class="step-num">06</div>
+        <div class="step-icon-wrap" style="background:rgba(52,211,153,0.12);">
+          <span class="material-symbols-outlined" style="color:#34d399;font-size:22px">support_agent</span>
+        </div>
+        <div class="step-title">Ongoing Support</div>
+        <p class="step-desc">Same-day support, remote monitoring, scheduled maintenance, and software updates are all included. Your dedicated local team is always a call away.</p>
+        <div class="step-detail">INCLUDED — NO EXTRA COST</div>
+      </div>
+
+    </div>
+  </div>
+</section>
+
+<!-- ═══════════════ WHAT'S INCLUDED TABLE ═══════════════ -->
+<section class="sec" style="background:#0d131f;">
+  <div class="wrap">
+    <div style="text-align:center;margin-bottom:60px;">
+      <div class="sec-label" style="justify-content:center;display:flex;">// Plan Comparison</div>
+      <h2 class="sec-title" style="max-width:520px;margin:0 auto 14px;">Everything your business<br/>needs — included.</h2>
+      <p class="sec-desc" style="max-width:480px;margin:0 auto;">Most robot vendors charge extra for support, maintenance, and training. TXROBO bundles it all into one transparent monthly plan.</p>
+    </div>
+
+    <div style="max-width:860px;margin:0 auto;">
+      <div style="background:#161c28;border-radius:16px;border:1px solid rgba(66,70,84,0.35);overflow:hidden;">
+        <table class="comp-table">
+          <thead>
+            <tr>
+              <th style="width:44%;">Feature</th>
+              <th style="width:28%;text-align:center;" class="">Basic Robot Vendor</th>
+              <th style="width:28%;text-align:center;" class="txrobo-col">TXROBO</th>
+            </tr>
+          </thead>
+          <tbody>
+            <tr>
+              <td>Robot Deployment</td>
+              <td class="basic-col" style="text-align:center;">
+                <span style="color:#f87171;font-size:13px;">You arrange</span>
+              </td>
+              <td class="txrobo-col" style="text-align:center;">
+                <span class="comp-check"><span class="material-symbols-outlined" style="font-size:15px;color:#34d399">check_circle</span> Included</span>
+              </td>
+            </tr>
+            <tr>
+              <td>On-Site Installation</td>
+              <td class="basic-col" style="text-align:center;">
+                <span style="color:#f87171;font-size:13px;">Extra fee</span>
+              </td>
+              <td class="txrobo-col" style="text-align:center;">
+                <span class="comp-check"><span class="material-symbols-outlined" style="font-size:15px;color:#34d399">check_circle</span> Included</span>
+              </td>
+            </tr>
+            <tr>
+              <td>Staff Training</td>
+              <td class="basic-col" style="text-align:center;">
+                <span style="color:#f87171;font-size:13px;">Extra fee</span>
+              </td>
+              <td class="txrobo-col" style="text-align:center;">
+                <span class="comp-check"><span class="material-symbols-outlined" style="font-size:15px;color:#34d399">check_circle</span> Included</span>
+              </td>
+            </tr>
+            <tr>
+              <td>Floor Mapping &amp; Route Programming</td>
+              <td class="basic-col" style="text-align:center;">
+                <span style="color:#f87171;font-size:13px;">DIY or extra fee</span>
+              </td>
+              <td class="txrobo-col" style="text-align:center;">
+                <span class="comp-check"><span class="material-symbols-outlined" style="font-size:15px;color:#34d399">check_circle</span> Included</span>
+              </td>
+            </tr>
+            <tr>
+              <td>Scheduled Maintenance</td>
+              <td class="basic-col" style="text-align:center;">
+                <span style="color:#f87171;font-size:13px;">Separate contract</span>
+              </td>
+              <td class="txrobo-col" style="text-align:center;">
+                <span class="comp-check"><span class="material-symbols-outlined" style="font-size:15px;color:#34d399">check_circle</span> Included</span>
+              </td>
+            </tr>
+            <tr>
+              <td>Repairs</td>
+              <td class="basic-col" style="text-align:center;">
+                <span style="color:#f87171;font-size:13px;">Per-incident fee</span>
+              </td>
+              <td class="txrobo-col" style="text-align:center;">
+                <span class="comp-check"><span class="material-symbols-outlined" style="font-size:15px;color:#34d399">check_circle</span> Included</span>
+              </td>
+            </tr>
+            <tr>
+              <td>Software &amp; Firmware Updates</td>
+              <td class="basic-col" style="text-align:center;">
+                <span style="color:#8c90a0;font-size:13px;">Sometimes</span>
+              </td>
+              <td class="txrobo-col" style="text-align:center;">
+                <span class="comp-check"><span class="material-symbols-outlined" style="font-size:15px;color:#34d399">check_circle</span> Always</span>
+              </td>
+            </tr>
+            <tr>
+              <td>24/7 Remote Monitoring</td>
+              <td class="basic-col" style="text-align:center;">
+                <span style="color:#f87171;font-size:13px;">Not offered</span>
+              </td>
+              <td class="txrobo-col" style="text-align:center;">
+                <span class="comp-check"><span class="material-symbols-outlined" style="font-size:15px;color:#34d399">check_circle</span> Included</span>
+              </td>
+            </tr>
+            <tr>
+              <td>Spare Units on Standby</td>
+              <td class="basic-col" style="text-align:center;">
+                <span style="color:#f87171;font-size:13px;">Not offered</span>
+              </td>
+              <td class="txrobo-col" style="text-align:center;">
+                <span class="comp-check"><span class="material-symbols-outlined" style="font-size:15px;color:#34d399">check_circle</span> Available</span>
+              </td>
+            </tr>
+            <tr>
+              <td>No Long-Term Contract Required</td>
+              <td class="basic-col" style="text-align:center;">
+                <span style="color:#f87171;font-size:13px;">1–3 year contract</span>
+              </td>
+              <td class="txrobo-col" style="text-align:center;">
+                <span class="comp-check"><span class="material-symbols-outlined" style="font-size:15px;color:#34d399">check_circle</span> Month-to-month</span>
+              </td>
+            </tr>
+          </tbody>
+        </table>
+      </div>
+
+      <div style="text-align:center;margin-top:32px;">
+        <a href="contact.html" class="btn-machined" style="padding:14px 28px;border-radius:8px;font-size:14px;display:inline-flex;align-items:center;gap:8px;text-decoration:none;">
+          <span class="material-symbols-outlined" style="font-size:16px">calendar_month</span>
+          Get Your 6-Day Free Trial
+        </a>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ═══════════════ SERVICE AREAS ═══════════════ -->
+<section class="sec" id="areas" style="background:#161c28;">
+  <div class="wrap">
+    <div class="geo-grid">
+      <div>
+        <div class="sec-label">// Deployment Network</div>
+        <h2 class="sec-title">Serving Texas<br/>&amp; the Southwest.</h2>
+        <p class="sec-desc">Local TXROBO support teams are on the ground in every active state — ready for same-day response. Expanding into new markets throughout 2026.</p>
+        <div class="sec-line"></div>
+        <div style="margin-top:32px;">
+          <p style="font-size:13px;color:#424654;font-family:'DM Mono';letter-spacing:0.06em;text-transform:uppercase;margin-bottom:16px;">// Current Footprint</p>
+          <div class="state-cards">
+            <div class="state-card primary-state">
+              <div class="state-name">Texas</div>
+              <div class="state-abbr">TX — PRIMARY</div>
+              <span class="state-status status-active">Active</span>
+            </div>
+            <div class="state-card">
+              <div class="state-name">Oklahoma</div>
+              <div class="state-abbr">OKC · Tulsa</div>
+              <span class="state-status status-active">Active</span>
+            </div>
+            <div class="state-card">
+              <div class="state-name">Louisiana</div>
+              <div class="state-abbr">NOLA · Baton Rouge</div>
+              <span class="state-status status-active">Active</span>
+            </div>
+            <div class="state-card">
+              <div class="state-name">New Mexico</div>
+              <div class="state-abbr">ABQ · Santa Fe</div>
+              <span class="state-status status-active">Active</span>
+            </div>
+            <div class="state-card">
+              <div class="state-name">Arkansas</div>
+              <div class="state-abbr">Little Rock · NW AR</div>
+              <span class="state-status status-active">Active</span>
+            </div>
+            <div class="state-card">
+              <div class="state-name">Mississippi</div>
+              <div class="state-abbr">Jackson · Biloxi</div>
+              <span class="state-status status-expanding">Expanding</span>
+            </div>
+            <div class="state-card">
+              <div class="state-name">Colorado</div>
+              <div class="state-abbr">Denver · Boulder</div>
+              <span class="state-status status-expanding">Expanding</span>
+            </div>
+            <div class="state-card">
+              <div class="state-name">Kansas</div>
+              <div class="state-abbr">Wichita · KC</div>
+              <span class="state-status status-expanding">Expanding</span>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <!-- Contact CTA -->
+      <div>
+        <div style="background:#0d131f;border-radius:14px;padding:36px;position:sticky;top:90px;border:1px solid rgba(66,70,84,0.3);">
+          <div style="font-family:'DM Mono';font-size:10px;letter-spacing:0.1em;text-transform:uppercase;color:#b2c5ff;margin-bottom:20px;">// Ready to Deploy?</div>
+          <h3 style="font-family:'Space Grotesk';font-size:1.5rem;font-weight:800;color:#dde2f4;letter-spacing:-0.02em;margin-bottom:12px;">Talk to your local<br/>TXROBO team.</h3>
+          <p style="font-size:13px;color:#8c90a0;line-height:1.7;margin-bottom:24px;">We'll assess your site, recommend the right robot, and have you operational within days — not weeks.</p>
+          <div style="display:flex;flex-direction:column;gap:10px;margin-bottom:24px;">
+            <a href="tel:2144549356" style="display:flex;align-items:center;gap:12px;padding:13px 16px;background:rgba(178,197,255,0.05);border:1px solid rgba(66,70,84,0.4);border-radius:9px;text-decoration:none;transition:all 0.15s;" onmouseover="this.style.borderColor='rgba(178,197,255,0.2)'" onmouseout="this.style.borderColor='rgba(66,70,84,0.4)'">
+              <span class="material-symbols-outlined" style="color:#b2c5ff;font-size:18px">call</span>
+              <div>
+                <div style="font-family:'Space Grotesk';font-weight:700;font-size:13px;color:#dde2f4;">214-454-9356</div>
+                <div style="font-family:'DM Mono';font-size:9px;letter-spacing:0.07em;color:#424654;">CALL ANYTIME</div>
+              </div>
+            </a>
+            <a href="mailto:info@txrobo.com" style="display:flex;align-items:center;gap:12px;padding:13px 16px;background:rgba(178,197,255,0.05);border:1px solid rgba(66,70,84,0.4);border-radius:9px;text-decoration:none;transition:all 0.15s;" onmouseover="this.style.borderColor='rgba(178,197,255,0.2)'" onmouseout="this.style.borderColor='rgba(66,70,84,0.4)'">
+              <span class="material-symbols-outlined" style="color:#b2c5ff;font-size:18px">mail</span>
+              <div>
+                <div style="font-family:'Space Grotesk';font-weight:700;font-size:13px;color:#dde2f4;">info@txrobo.com</div>
+                <div style="font-family:'DM Mono';font-size:9px;letter-spacing:0.07em;color:#424654;">EMAIL US</div>
+              </div>
+            </a>
+          </div>
+          <a href="contact.html" class="btn-machined" style="width:100%;justify-content:center;padding:14px;border-radius:9px;font-size:14px;display:flex;align-items:center;gap:8px;text-decoration:none;">
+            <span class="material-symbols-outlined" style="font-size:16px">calendar_month</span>
+            Book Free Site Assessment
+          </a>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ═══════════════ CTA ═══════════════ -->
+<section class="cta-sec">
+  <div class="cta-glow"></div>
+  <div style="position:relative;z-index:1;max-width:640px;margin:0 auto;">
+    <div style="font-family:'DM Mono';font-size:11px;letter-spacing:0.12em;text-transform:uppercase;color:#b2c5ff;margin-bottom:20px;">// Initiate Protocol</div>
+    <h2 class="cta-title">Ready to deploy<br/>your <span>first robot</span>?</h2>
+    <p class="cta-sub">6-day free trial. No commitment. Your robot arrives ready to work — we handle everything else.</p>
+    <div class="cta-btns">
+      <a href="contact.html" class="btn-machined">
+        <span class="material-symbols-outlined" style="font-size:16px">calendar_month</span>
+        Get Free Trial
+      </a>
+      <button class="btn-ghost" onclick="toggleAI(); sendQuickMsg('What services are included with a TXROBO robot?')">
+        <span class="material-symbols-outlined" style="font-size:16px">smart_toy</span>
+        Ask About Services
+      </button>
+    </div>
+    <div style="margin-top:28px;font-family:'DM Mono';font-size:10px;letter-spacing:0.08em;color:#424654;">
+      OR CALL <a href="tel:2144549356" style="color:#b2c5ff;text-decoration:none;">214-454-9356</a> · <a href="mailto:info@txrobo.com" style="color:#8c90a0;text-decoration:none;">info@txrobo.com</a>
+    </div>
+  </div>
+</section>
+
+<!-- ═══════════════ FOOTER ═══════════════ -->
+<footer>
+  <div class="footer-inner">
+    <div class="footer-grid">
+      <div>
+        <div style="margin-bottom:14px;">
+          <img src="https://res.cloudinary.com/dchlhfrdi/image/upload/txrobo/TXROBO-LOGO.webp" alt="TXROBO" style="height:28px;width:auto;opacity:0.85;" onerror="this.style.display='none';this.nextElementSibling.style.display='block'"/>
+          <div class="f-logo" style="display:none">TX<span>ROBO</span></div>
+        </div>
+        <p class="f-tagline">Authorized KEENON Robotics partner deploying precision service robots across Texas and the American Southwest.</p>
+      </div>
+      <div><div class="f-col-title">// Products</div><ul class="f-links"><li><a href="products.html#t10">T10 Delivery Robot</a></li><li><a href="products.html#t9">T9 Delivery Robot</a></li><li><a href="products.html#s100">S100 Disinfection</a></li></ul></div>
+      <div><div class="f-col-title">// Company</div><ul class="f-links"><li><a href="about.html">About TXROBO</a></li><li><a href="solutions.html">Solutions</a></li><li><a href="blog.html">Blog</a></li><li><a href="contact.html">Contact</a></li></ul></div>
+      <div><div class="f-col-title">// Network</div><ul class="f-links"><li><a href="index.html#areas">Texas</a></li><li><a href="index.html#areas">Oklahoma</a></li><li><a href="index.html#areas">Louisiana</a></li><li><a href="index.html#areas">Southwest USA</a></li></ul></div>
+    </div>
+    <div class="footer-bottom">
+      <div class="f-copy">© 2026 TXROBO INC. · AUTHORIZED KEENON ROBOTICS DISTRIBUTOR · ALL RIGHTS RESERVED</div>
+      <div class="f-contacts"><a href="tel:214-454-9356">214-454-9356</a><a href="mailto:info@txrobo.com">info@txrobo.com</a></div>
+    </div>
+  </div>
+</footer>
+
+</div><!-- end #page-wrapper -->
+
+<!-- ═══════════════ AI PANEL ═══════════════ -->
+<div class="ai-overlay" id="ai-overlay" onclick="toggleAI()"></div>
+<aside id="ai-panel" role="complementary" aria-label="TXROBO AI Assistant">
+  <div class="ai-hdr">
+    <div style="display:flex;align-items:center;gap:12px;">
+      <div class="ai-avatar"><span class="material-symbols-outlined" style="color:#b2c5ff;font-size:17px">smart_toy</span></div>
+      <div><div class="ai-name">TXROBO Assistant</div><div class="ai-status"><span class="pulse-dot"></span> Online · Claude AI</div></div>
+    </div>
+    <button class="ai-close" onclick="toggleAI()"><span class="material-symbols-outlined" style="font-size:17px">close</span></button>
+  </div>
+  <div class="ai-chips">
+    <button class="chip" onclick="sendQuickMsg('What robots does TXROBO offer?')">Products</button>
+    <button class="chip" onclick="sendQuickMsg('How much does a robot cost?')">Pricing</button>
+    <button class="chip" onclick="sendQuickMsg('Tell me about the 6-day free trial')">Free Trial</button>
+    <button class="chip" onclick="sendQuickMsg('Do you serve Oklahoma and Louisiana?')">Service Areas</button>
+  </div>
+  <div id="ai-msgs"><div class="msg-bot">Hi — I'm TXROBO's AI assistant.<br/><br/>Ask me about our robots, pricing, or how to get your 6-day free trial!</div></div>
+  <div class="ai-inp-area">
+    <textarea id="ai-input" class="ai-inp" placeholder="Ask about robots, pricing, service areas..." rows="1" onkeydown="if(event.key==='Enter'&&!event.shiftKey){event.preventDefault();sendMessage();}" oninput="this.style.height='auto';this.style.height=Math.min(this.scrollHeight,110)+'px';"></textarea>
+    <button class="ai-send btn-machined" onclick="sendMessage()"><span class="material-symbols-outlined" style="font-size:15px">send</span>TRANSMIT</button>
+    <div class="ai-hint">Powered by Claude · Call <a href="tel:2144549356" style="color:#b2c5ff">214-454-9356</a></div>
+  </div>
+</aside>
+<button id="ai-fab" onclick="toggleAI()"><span class="material-symbols-outlined" style="color:#001848;font-size:24px">smart_toy</span><span class="notif">1</span></button>
+
+<script src="assets/js/chat.js"></script>
+<script>
+  window.addEventListener('scroll',()=>{document.getElementById('navbar').classList.toggle('scrolled',window.scrollY>24);});
+  let aiOpen=false;
+  function toggleAI(){aiOpen=!aiOpen;const panel=document.getElementById('ai-panel');const wrapper=document.getElementById('page-wrapper');const overlay=document.getElementById('ai-overlay');const fab=document.getElementById('ai-fab');const navBtn=document.getElementById('nav-ai-btn');if(aiOpen){panel.classList.add('open');wrapper.classList.add('panel-open');overlay.classList.add('visible');fab.style.display='none';navBtn.style.background='rgba(178,197,255,0.1)';navBtn.style.borderColor='rgba(178,197,255,0.35)';scrollMsgs();}else{panel.classList.remove('open');wrapper.classList.remove('panel-open');overlay.classList.remove('visible');fab.style.display='flex';navBtn.style.background='';navBtn.style.borderColor='';}}
+  setTimeout(()=>{document.getElementById('ai-fab').style.display='flex';},900);
+  function scrollMsgs(){const el=document.getElementById('ai-msgs');if(el)el.scrollTop=el.scrollHeight;}
+  function renderMd(text){return text.replace(/\*\*(.*?)\*\*/g,'<strong>$1</strong>').replace(/\*(.*?)\*/g,'<em>$1</em>').replace(/\[([^\]]+)\]\(([^)]+)\)/g,'<a href="$2">$1</a>').replace(/\n/g,'<br/>');}
+  function appendMsg(text,role){const c=document.getElementById('ai-msgs');const d=document.createElement('div');d.className=role==='user'?'msg-user':'msg-bot';d.innerHTML=renderMd(text);c.appendChild(d);scrollMsgs();}
+  function showTyping(){const c=document.getElementById('ai-msgs');const d=document.createElement('div');d.className='msg-bot';d.id='typing-ind';d.innerHTML='<div class="typing"><div class="td"></div><div class="td"></div><div class="td"></div></div>';c.appendChild(d);scrollMsgs();}
+  function removeTyping(){const e=document.getElementById('typing-ind');if(e)e.remove();}
+  async function sendMessage(){const inp=document.getElementById('ai-input');const msg=inp.value.trim();if(!msg)return;inp.value='';inp.style.height='auto';appendMsg(msg,'user');showTyping();try{const r=await fetch('http://localhost:5000/api/chat',{method:'POST',headers:{'Content-Type':'application/json'},body:JSON.stringify({message:msg}),signal:AbortSignal.timeout(12000)});if(!r.ok)throw new Error();const d=await r.json();removeTyping();appendMsg(d.reply||'Please try again.','bot');}catch{removeTyping();appendMsg(getFallbackAnswer(msg),'bot');}}
+  function sendQuickMsg(text){if(!aiOpen)toggleAI();document.getElementById('ai-input').value=text;sendMessage();}
+</script>
+  <script src="assets/js/enhance.js" defer></script>
+  <script src="assets/js/showcase.js" defer></script>
+</body>
+</html>

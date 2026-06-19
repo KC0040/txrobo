@@ -1,0 +1,276 @@
+<!DOCTYPE html>
+
+<html class="dark" lang="en"><head>
+<meta charset="utf-8"/>
+<meta content="width=device-width, initial-scale=1.0" name="viewport"/>
+<script src="https://cdn.tailwindcss.com?plugins=forms,container-queries"></script>
+<link href="https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@300;400;500;600;700;900&amp;family=Inter:wght@300;400;500;600;700&amp;display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/>
+<script id="tailwind-config">
+        tailwind.config = {
+            darkMode: "class",
+            theme: {
+                extend: {
+                    "colors": {
+                        "on-secondary-fixed": "#151c25",
+                        "background": "#0d131f",
+                        "surface-dim": "#0d131f",
+                        "primary-container": "#2b6cee",
+                        "secondary-container": "#404752",
+                        "on-secondary-fixed-variant": "#404752",
+                        "on-secondary-container": "#afb5c2",
+                        "surface-tint": "#b2c5ff",
+                        "secondary-fixed-dim": "#c0c7d3",
+                        "surface-container-low": "#161c28",
+                        "on-surface": "#dde2f4",
+                        "outline-variant": "#424654",
+                        "inverse-on-surface": "#2a303d",
+                        "on-primary-fixed-variant": "#0040a2",
+                        "on-primary-fixed": "#001848",
+                        "tertiary": "#a4c9ff",
+                        "on-error": "#690005",
+                        "outline": "#8c90a0",
+                        "tertiary-container": "#2676c8",
+                        "inverse-surface": "#dde2f4",
+                        "on-primary-container": "#fdfbff",
+                        "surface-container-high": "#242a37",
+                        "surface": "#0d131f",
+                        "secondary-fixed": "#dce3f0",
+                        "on-primary": "#002b73",
+                        "surface-container": "#1a202c",
+                        "primary": "#b2c5ff",
+                        "on-tertiary-fixed": "#001c39",
+                        "surface-container-highest": "#2f3542",
+                        "on-tertiary": "#00315d",
+                        "tertiary-fixed-dim": "#a4c9ff",
+                        "primary-fixed-dim": "#b2c5ff",
+                        "tertiary-fixed": "#d4e3ff",
+                        "on-tertiary-fixed-variant": "#004883",
+                        "error-container": "#93000a",
+                        "inverse-primary": "#0055d3",
+                        "on-error-container": "#ffdad6",
+                        "on-tertiary-container": "#fcfbff",
+                        "surface-variant": "#2f3542",
+                        "primary-fixed": "#dae2ff",
+                        "error": "#ffb4ab",
+                        "on-secondary": "#2a313b",
+                        "on-surface-variant": "#c3c6d7",
+                        "surface-bright": "#333946",
+                        "secondary": "#c0c7d3",
+                        "on-background": "#dde2f4",
+                        "surface-container-lowest": "#080e1a"
+                    },
+                    "borderRadius": {
+                        "DEFAULT": "0.125rem",
+                        "lg": "0.25rem",
+                        "xl": "0.5rem",
+                        "full": "0.75rem"
+                    },
+                    "fontFamily": {
+                        "headline": ["Space Grotesk"],
+                        "display": ["Space Grotesk"],
+                        "body": ["Inter"],
+                        "label": ["Space Grotesk"]
+                    }
+                },
+            },
+        }
+    </script>
+<style>
+        .material-symbols-outlined {
+            font-variation-settings: 'FILL' 0, 'wght' 400, 'GRAD' 0, 'opsz' 24;
+        }
+        body {
+            background-color: #0d131f;
+            color: #dde2f4;
+            font-family: 'Inter', sans-serif;
+        }
+    </style>
+<style>
+    body {
+      min-height: max(884px, 100dvh);
+    }
+  </style>
+  </head>
+<body class="selection:bg-primary-container selection:text-on-primary-container">
+<!-- TopAppBar -->
+<header class="fixed top-0 left-0 w-full z-[150] bg-slate-950/80 backdrop-blur-xl shadow-[0_20px_50px_rgba(8,_112,_184,_0.05)]">
+<div class="flex justify-between items-center px-8 py-6 max-w-[1920px] mx-auto">
+<div class="flex items-center gap-4">
+<span class="material-symbols-outlined text-indigo-200" data-icon="menu">menu</span>
+<span class="font-['Space_Grotesk'] text-2xl font-black tracking-tighter text-indigo-200">TXROBO</span>
+</div>
+<nav class="hidden md:flex gap-8 items-center">
+<a class="font-['Space_Grotesk'] uppercase tracking-[0.2em] text-xs font-bold text-slate-400 hover:text-slate-200 transition-colors" href="#">FLEET</a>
+<a class="font-['Space_Grotesk'] uppercase tracking-[0.2em] text-xs font-bold text-slate-400 hover:text-slate-200 transition-colors" href="#">PRECISION</a>
+<a class="font-['Space_Grotesk'] uppercase tracking-[0.2em] text-xs font-bold text-slate-400 hover:text-slate-200 transition-colors" href="#">KINETICS</a>
+<a class="font-['Space_Grotesk'] uppercase tracking-[0.2em] text-xs font-bold text-slate-400 hover:text-slate-200 transition-colors" href="#">DASHBOARD</a>
+<a class="font-['Space_Grotesk'] uppercase tracking-[0.2em] text-xs font-bold text-slate-400 hover:text-slate-200 transition-colors" href="#">INTEL</a>
+</nav>
+<button class="bg-primary-container text-on-primary-container font-['Space_Grotesk'] px-6 py-2 rounded-lg font-bold tracking-tight hover:scale-95 duration-200 ease-out">CONNECT</button>
+</div>
+</header>
+<main class="pt-32 pb-24 px-8 max-w-[1920px] mx-auto min-h-screen">
+<!-- Hero Section -->
+<section class="mb-24">
+<div class="grid grid-cols-1 lg:grid-cols-12 gap-12 items-end">
+<div class="lg:col-span-8">
+<h1 class="font-['Space_Grotesk'] text-[clamp(3.5rem,8vw,6rem)] leading-[0.9] font-black tracking-tighter text-primary uppercase">
+                        SECURE<br/>COMMUNICATIONS
+                    </h1>
+</div>
+<div class="lg:col-span-4 pb-4">
+<p class="font-['Inter'] text-on-surface-variant text-lg leading-relaxed max-w-md">
+                        Initiate a high-priority inquiry with the TXROBO Kinetics division. Our encrypted lead generation protocol ensures end-to-end security for industrial partnerships.
+                    </p>
+</div>
+</div>
+</section>
+<!-- Bento Grid Layout -->
+<div class="grid grid-cols-1 lg:grid-cols-3 gap-6">
+<!-- Inquiry Form Container -->
+<div class="lg:col-span-2 bg-surface-container-low p-8 md:p-12 rounded-xl relative overflow-hidden">
+<div class="relative z-10">
+<div class="mb-10 flex items-center gap-3">
+<div class="w-2 h-2 rounded-full bg-primary animate-pulse"></div>
+<h2 class="font-['Space_Grotesk'] text-sm font-bold tracking-[0.3em] text-primary uppercase">Mission Protocol: Inquiry</h2>
+</div>
+<form class="grid grid-cols-1 md:grid-cols-2 gap-8">
+<div class="space-y-2">
+<label class="font-['Space_Grotesk'] text-[10px] tracking-widest uppercase text-outline">Entity Name</label>
+<input class="w-full bg-surface-container-highest border-none text-on-surface p-4 rounded focus:ring-1 focus:ring-primary/40 transition-all font-['Space_Grotesk'] placeholder:text-outline-variant" placeholder="FULL LEGAL NAME" type="text"/>
+</div>
+<div class="space-y-2">
+<label class="font-['Space_Grotesk'] text-[10px] tracking-widest uppercase text-outline">Corporate Identifier</label>
+<input class="w-full bg-surface-container-highest border-none text-on-surface p-4 rounded focus:ring-1 focus:ring-primary/40 transition-all font-['Space_Grotesk'] placeholder:text-outline-variant" placeholder="EMAIL@PROTOCOL.COM" type="email"/>
+</div>
+<div class="space-y-2 md:col-span-2">
+<label class="font-['Space_Grotesk'] text-[10px] tracking-widest uppercase text-outline">Operational Focus</label>
+<div class="grid grid-cols-2 md:grid-cols-4 gap-4 pt-2">
+<button class="border border-outline-variant p-4 text-[10px] font-bold tracking-widest uppercase hover:bg-primary-container hover:text-on-primary-container transition-all" type="button">Robotics</button>
+<button class="border border-outline-variant p-4 text-[10px] font-bold tracking-widest uppercase hover:bg-primary-container hover:text-on-primary-container transition-all" type="button">AI Core</button>
+<button class="border border-outline-variant p-4 text-[10px] font-bold tracking-widest uppercase hover:bg-primary-container hover:text-on-primary-container transition-all" type="button">Hardware</button>
+<button class="border border-outline-variant p-4 text-[10px] font-bold tracking-widest uppercase hover:bg-primary-container hover:text-on-primary-container transition-all" type="button">System Intel</button>
+</div>
+</div>
+<div class="space-y-2 md:col-span-2">
+<label class="font-['Space_Grotesk'] text-[10px] tracking-widest uppercase text-outline">Detailed Specification</label>
+<textarea class="w-full bg-surface-container-highest border-none text-on-surface p-4 rounded focus:ring-1 focus:ring-primary/40 transition-all font-['Space_Grotesk'] placeholder:text-outline-variant resize-none" placeholder="DESCRIBE THE KINETIC REQUIREMENT..." rows="6"></textarea>
+</div>
+<div class="md:col-span-2">
+<button class="w-full bg-primary-container py-5 text-on-primary-container font-['Space_Grotesk'] font-black tracking-[0.2em] uppercase hover:bg-primary transition-colors flex justify-center items-center gap-4">
+                                TRANSMIT DATA 
+                                <span class="material-symbols-outlined text-sm">send</span>
+</button>
+</div>
+</form>
+</div>
+<!-- Abstract visual element -->
+<div class="absolute -right-20 -bottom-20 opacity-5 pointer-events-none">
+<span class="material-symbols-outlined text-[30rem]" style="font-variation-settings: 'FILL' 1;">memory</span>
+</div>
+</div>
+<!-- Side Intel Panel -->
+<div class="flex flex-col gap-6">
+<!-- Location Cards -->
+<div class="bg-surface-container p-8 rounded-xl flex-1">
+<h3 class="font-['Space_Grotesk'] text-xs font-bold tracking-[0.2em] text-primary uppercase mb-8 flex items-center justify-between">
+                        Global Access Points
+                        <span class="material-symbols-outlined text-sm">public</span>
+</h3>
+<div class="space-y-8">
+<div class="group cursor-pointer">
+<div class="flex justify-between items-center mb-1">
+<h4 class="font-['Space_Grotesk'] text-lg font-bold">SAN FRANCISCO</h4>
+<span class="text-[10px] font-bold text-primary px-2 py-1 bg-primary/10 rounded">HEADQUARTERS</span>
+</div>
+<p class="text-xs text-outline leading-relaxed font-['Inter']">455 Mission Bay Blvd South,<br/>San Francisco, CA 94158</p>
+<div class="h-[1px] w-0 group-hover:w-full bg-primary transition-all duration-500 mt-4 opacity-30"></div>
+</div>
+<div class="group cursor-pointer">
+<div class="flex justify-between items-center mb-1">
+<h4 class="font-['Space_Grotesk'] text-lg font-bold">TOKYO</h4>
+<span class="text-[10px] font-bold text-outline-variant px-2 py-1 bg-surface-container-highest rounded">R&amp;D HUB</span>
+</div>
+<p class="text-xs text-outline leading-relaxed font-['Inter']">Minato City, Akasaka, 9-chōme−7−1,<br/>Tokyo 107-6245</p>
+<div class="h-[1px] w-0 group-hover:w-full bg-primary transition-all duration-500 mt-4 opacity-30"></div>
+</div>
+<div class="group cursor-pointer">
+<div class="flex justify-between items-center mb-1">
+<h4 class="font-['Space_Grotesk'] text-lg font-bold">BERLIN</h4>
+<span class="text-[10px] font-bold text-outline-variant px-2 py-1 bg-surface-container-highest rounded">KINETICS LAB</span>
+</div>
+<p class="text-xs text-outline leading-relaxed font-['Inter']">Am Sandtorkai 72,<br/>20457 Hamburg/Berlin Corridor</p>
+<div class="h-[1px] w-0 group-hover:w-full bg-primary transition-all duration-500 mt-4 opacity-30"></div>
+</div>
+</div>
+</div>
+<!-- Secure Protocol Info -->
+<div class="bg-indigo-900/10 border border-indigo-500/10 p-8 rounded-xl">
+<div class="flex items-start gap-4">
+<span class="material-symbols-outlined text-indigo-400" data-icon="verified_user">verified_user</span>
+<div>
+<h4 class="font-['Space_Grotesk'] text-xs font-bold tracking-widest text-indigo-200 uppercase mb-2">Secure Link Active</h4>
+<p class="text-[10px] text-slate-400 font-['Inter'] leading-relaxed uppercase tracking-tight">
+                                Your session is protected by TXROBO Quant-Shield. All data transmissions are 256-bit encrypted and routed through private kinetic tunnels.
+                            </p>
+</div>
+</div>
+</div>
+</div>
+</div>
+<!-- Visual Map/Image Section -->
+<section class="mt-24 grid grid-cols-1 lg:grid-cols-12 gap-6 h-[400px]">
+<div class="lg:col-span-12 rounded-xl overflow-hidden relative">
+<img alt="Global Network" class="w-full h-full object-cover grayscale brightness-50 contrast-125" data-alt="A highly detailed and technical world map visualized through a glowing blue digital matrix on a massive glass screen. The map is overlaid with pulsing data nodes and light-speed communication lines connecting major global hubs like San Francisco and Tokyo. The environment is a dimly lit, high-security command center with sleek dark metallic surfaces and a cool, sophisticated atmosphere of global precision engineering." src="https://lh3.googleusercontent.com/aida-public/AB6AXuAnScfuVg1D6msmtKt8JFPXRfQsYZs5WZHK0lVrrrStCyPCU-wcSdDd-qo2X15psz8jM53JnfYy_tFEul_oSDaaIK-Z_uNtPzvZri8JlveWBsjAkWYPgLba8wET0c794ioHqkqask_Ac9E5YxvGDc0BfZvalRtBV4257o5WQ_XiQqPihSYl0q2n3GWEMV3MlZT10PmtwAFva-dqgCUtsyGL1pXa8G3jKYrR9CUyeHtP8Hw7wAqZv2Hbk5E4BG8XNzzuwgAtSbDpee7r"/>
+<div class="absolute inset-0 bg-gradient-to-t from-background via-transparent to-transparent"></div>
+<div class="absolute bottom-8 left-8 right-8 flex flex-col md:flex-row justify-between items-end gap-6">
+<div class="max-w-xl">
+<h2 class="font-['Space_Grotesk'] text-4xl font-black tracking-tighter text-white uppercase mb-2">A GLOBAL INFRASTRUCTURE</h2>
+<p class="text-sm font-['Inter'] text-indigo-100/60 uppercase tracking-[0.2em]">Network integrity maintained at 99.999% globally.</p>
+</div>
+<div class="bg-slate-900/40 backdrop-blur-md p-4 rounded-lg flex items-center gap-6">
+<div class="text-center">
+<span class="block font-['Space_Grotesk'] text-xl font-bold text-primary">03</span>
+<span class="block text-[8px] tracking-widest text-outline uppercase">Global Hubs</span>
+</div>
+<div class="w-px h-8 bg-outline-variant/30"></div>
+<div class="text-center">
+<span class="block font-['Space_Grotesk'] text-xl font-bold text-primary">124</span>
+<span class="block text-[8px] tracking-widest text-outline uppercase">Edge Nodes</span>
+</div>
+<div class="w-px h-8 bg-outline-variant/30"></div>
+<div class="text-center flex flex-col items-center">
+<span class="material-symbols-outlined text-primary text-xl" style="font-variation-settings: 'FILL' 1;">security</span>
+<span class="block text-[8px] tracking-widest text-outline uppercase">Certified</span>
+</div>
+</div>
+</div>
+</div>
+</section>
+</main>
+<!-- Footer -->
+<footer class="bg-slate-950 w-full py-12 px-8 border-t border-slate-800/20">
+<div class="max-w-[1920px] mx-auto flex flex-col md:flex-row justify-between items-center gap-8">
+<div class="flex flex-col gap-2">
+<span class="font-['Space_Grotesk'] font-bold text-slate-200 text-lg">TXROBO KINETICS</span>
+<span class="font-['Inter'] text-[10px] tracking-widest uppercase text-slate-500">© 2024 TXROBO KINETICS. ENGINEERED FOR PRECISION.</span>
+</div>
+<nav class="flex gap-10">
+<a class="font-['Inter'] text-[10px] tracking-widest uppercase text-slate-500 hover:text-indigo-200 transition-colors" href="#">SYSTEMS</a>
+<a class="font-['Inter'] text-[10px] tracking-widest uppercase text-slate-500 hover:text-indigo-200 transition-colors" href="#">NETWORK</a>
+<a class="font-['Inter'] text-[10px] tracking-widest uppercase text-slate-500 hover:text-indigo-200 transition-colors" href="#">PRIVACY</a>
+<a class="font-['Inter'] text-[10px] tracking-widest uppercase text-slate-500 hover:text-indigo-200 transition-colors" href="#">PROTOCOL</a>
+</nav>
+<div class="flex gap-4">
+<div class="w-8 h-8 rounded-full border border-slate-800 flex items-center justify-center text-slate-500 hover:border-indigo-500 hover:text-indigo-200 transition-all cursor-pointer">
+<span class="material-symbols-outlined text-sm">share</span>
+</div>
+<div class="w-8 h-8 rounded-full border border-slate-800 flex items-center justify-center text-slate-500 hover:border-indigo-500 hover:text-indigo-200 transition-all cursor-pointer">
+<span class="material-symbols-outlined text-sm">terminal</span>
+</div>
+</div>
+</div>
+</footer>
+</body></html>
