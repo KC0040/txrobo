@@ -87,16 +87,16 @@
       <span class="logo-text" style="display:none">TX<span>ROBO</span></span>
     </a>
     <nav class="nav-links">
-      <a href="index.html" class="nav-link">Home</a>
-      <a href="products.html" class="nav-link">Products</a>
-      <a href="solutions.html" class="nav-link">Solutions</a>
-      <a href="blog.html" class="nav-link active">Blog</a>
-      <a href="about.html" class="nav-link">About</a>
-      <a href="contact.html" class="nav-link">Contact</a>
+      <a href="index.html" class="nav-link" data-i18n="nav.overview">Home</a>
+      <a href="products.html" class="nav-link" data-i18n="nav.robots">Products</a>
+      <a href="solutions.html" class="nav-link" data-i18n="nav.solutions">Solutions</a>
+      <a href="blog.html" class="nav-link active" data-i18n="footer.blog">Blog</a>
+      <a href="about.html" class="nav-link" data-i18n="nav.about">About</a>
+      <a href="contact.html" class="nav-link" data-i18n="footer.contact_link">Contact</a>
     </nav>
     <div style="display:flex;align-items:center;gap:10px;">
       <button class="nav-ai-btn" onclick="toggleAI()" id="nav-ai-btn"><span class="pulse-dot"></span>ASK AI</button>
-      <a href="contact.html" class="nav-demo">Book Demo</a>
+      <a href="contact.html" class="nav-demo" data-i18n="nav.request_demo">Book Demo</a>
     </div>
   </div>
 </header>
@@ -108,9 +108,9 @@
     <div class="page-hero-glow left"></div>
     <div class="page-hero-glow right"></div>
     <div class="page-hero-inner">
-      <div class="page-eyebrow"><span class="material-symbols-outlined" style="font-size:13px">smart_toy</span>// Intel Feed · AI-Authored</div>
-      <h1 class="page-hero-title">Robotics<br/><span>Insights.</span></h1>
-      <p class="page-hero-sub">Industry analysis, deployment guides, and ROI breakdowns for Texas, Oklahoma, Louisiana, and Southwest USA businesses navigating the labor shortage with autonomous robots.</p>
+      <div class="page-eyebrow" data-i18n="blog.hero.eyebrow"><span class="material-symbols-outlined" style="font-size:13px">smart_toy</span>// Intel Feed · AI-Authored</div>
+      <h1 class="page-hero-title" data-i18n="blog.h1">Robotics<br/><span>Insights.</span></h1>
+      <p class="page-hero-sub" data-i18n="blog.hero.sub">Industry analysis, deployment guides, and ROI breakdowns for Texas, Oklahoma, Louisiana, and Southwest USA businesses navigating the labor shortage with autonomous robots.</p>
     </div>
   </section>
 
@@ -261,6 +261,7 @@
 </aside>
 <button id="ai-fab" onclick="toggleAI()"><span class="material-symbols-outlined" style="color:#001848;font-size:24px">smart_toy</span><span class="notif">1</span></button>
 
+<script src="assets/js/i18n.js" defer></script>
 <script src="assets/js/chat.js"></script>
 <script>
 // ── AI Panel ──────────────────────────────────

@@ -93,9 +93,9 @@
 
 <div id="mobile-menu">
   <button id="mobile-close" style="position:absolute;top:1.5rem;right:1.5rem;background:none;border:none;color:#b2c5ff;cursor:pointer;"><span class="material-symbols-outlined" style="font-size:2rem;">close</span></button>
-  <a href="/">Overview</a><a href="/products.html">Robots</a>
-  <a href="/solutions.html">Solutions</a><a href="/about.html">About</a>
-  <a href="/contact.html" style="color:#b2c5ff;opacity:1;">Request Demo</a>
+  <a href="/" data-i18n="nav.overview">Overview</a><a href="/products.html" data-i18n="nav.robots">Robots</a>
+  <a href="/solutions.html" data-i18n="nav.solutions">Solutions</a><a href="/about.html" data-i18n="nav.about">About</a>
+  <a href="/contact.html" style="color:#b2c5ff;opacity:1;" data-i18n="nav.request_demo">Request Demo</a>
 </div>
 
 <header id="top-nav" style="position:fixed;top:0;left:0;right:0;z-index:100;transition:background .3s;padding:1.25rem 2rem;">
@@ -105,8 +105,8 @@
       <span style="font-family:'Space Grotesk',sans-serif;font-weight:900;font-size:1.1rem;letter-spacing:-.03em;color:#dde2f4;">TXROBO</span>
     </a>
     <nav style="display:flex;gap:2.5rem;align-items:center;" class="hidden-m">
-      <a href="/" class="nav-link">Overview</a><a href="/products.html" class="nav-link">Robots</a>
-      <a href="/solutions.html" class="nav-link">Solutions</a><a href="/about.html" class="nav-link">About</a>
+      <a href="/" class="nav-link" data-i18n="nav.overview">Overview</a><a href="/products.html" class="nav-link" data-i18n="nav.robots">Robots</a>
+      <a href="/solutions.html" class="nav-link" data-i18n="nav.solutions">Solutions</a><a href="/about.html" class="nav-link" data-i18n="nav.about">About</a>
     </nav>
     <div style="display:flex;align-items:center;gap:1rem;">
       <a href="/contact.html" class="nav-link active hidden-m" style="color:#b2c5ff;">Contact</a>
@@ -120,8 +120,8 @@
 
     <!-- Left: copy -->
     <div style="padding-top:2rem;">
-      <div class="eyebrow gsap-fade-up" style="margin-bottom:1.25rem;">Inquiry // 2025</div>
-      <h1 class="gsap-fade-up" style="font-family:'Space Grotesk',sans-serif;font-weight:900;font-size:clamp(3rem,6vw,5rem);line-height:.88;letter-spacing:-.05em;margin-bottom:2rem;">
+      <div class="eyebrow gsap-fade-up" style="margin-bottom:1.25rem;" data-i18n="contact.hero.eyebrow">Inquiry // 2025</div>
+      <h1 class="gsap-fade-up" style="font-family:'Space Grotesk',sans-serif;font-weight:900;font-size:clamp(3rem,6vw,5rem);line-height:.88;letter-spacing:-.05em;margin-bottom:2rem;" data-i18n="contact.h1">
         LET'S<br/>DEPLOY<br/><span style="color:#2b6cee;">YOUR ROBOT.</span>
       </h1>
       <p class="gsap-fade-up" style="color:#c3c6d7;line-height:1.75;font-size:.95rem;margin-bottom:1rem;">Fill in the form — the more detail you share about your venue, the faster we can configure the right setup for you.</p>
@@ -450,13 +450,14 @@
       <span style="font-family:'Space Grotesk',sans-serif;font-weight:900;font-size:.95rem;letter-spacing:-.02em;">TXROBO</span>
     </div>
     <div style="display:flex;gap:2rem;flex-wrap:wrap;">
-      <a href="/" class="nav-link">Overview</a><a href="/products.html" class="nav-link">Robots</a>
-      <a href="/solutions.html" class="nav-link">Solutions</a><a href="/about.html" class="nav-link">About</a>
+      <a href="/" class="nav-link" data-i18n="nav.overview">Overview</a><a href="/products.html" class="nav-link" data-i18n="nav.robots">Robots</a>
+      <a href="/solutions.html" class="nav-link" data-i18n="nav.solutions">Solutions</a><a href="/about.html" class="nav-link" data-i18n="nav.about">About</a>
     </div>
     <span style="font-size:.6rem;letter-spacing:.2em;text-transform:uppercase;color:#424654;font-family:'Space Grotesk',sans-serif;">© 2025 TXROBO · EastWestNexus LLC</span>
   </div>
 </footer>
 
+<script src="/assets/js/i18n.js" defer></script>
 <script src="/assets/js/chat.js" defer></script>
 <script>
 window.addEventListener('scroll',function(){
