@@ -540,9 +540,9 @@ document.getElementById('contact-form').addEventListener('submit',function(e){
   document.getElementById('submit-text').style.display='none';
   document.getElementById('submit-spinner').style.display='inline';
 
-  if(this.action.indexOf('YOUR_FORMSPREE_ID')!==-1){mailtoFallback();return;}
-
-  fetch(this.action,{method:'POST',body:new FormData(this),headers:{Accept:'application/json'}})
+  var fd=new FormData(this);
+  var payload={site:'TXRobo',name:fd.get('name')||fd.get('fullName'),email:fd.get('email'),phone:fd.get('phone'),business:fd.get('business')||fd.get('businessName'),industry:fd.get('industry')||fd.get('businessType'),message:fd.get('message')||fd.get('inquiry')};
+  fetch('https://ach-n8n.pkxdtf.easypanel.host/webhook/contact-form',{method:'POST',headers:{'Content-Type':'application/json'},body:JSON.stringify(payload)})
   .then(function(r){
     if(r.ok){showSuccess();}
     else{return r.json().then(function(d){throw new Error(d.errors?d.errors.map(function(x){return x.message;}).join(', '):'Submit failed');});}
